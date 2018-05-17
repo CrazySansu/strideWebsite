@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Sanskar Baid">
 	<script src="js/angular.min.js" type="text/javascript"></script>
-	<script src="js/app.js" type="text/javascript"></script>
+	<!-- <script src="js/app.js" type="text/javascript"></script> -->
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
@@ -30,12 +30,11 @@
       			<a class="navbar-brand" href="index.html">
       				<div id="strideLogo" >
       					<img alt="StrideAI" id="white" src="img/logo-white.png">
-      					<!-- <img alt="StrideAI" id="color" src="img/logo-color.png"> -->
-      					<img alt="StrideAI" id="logo" src="img/logo.jpg">
+      					<img alt="StrideAI" id="logo" src="img/stride-badge.png">
       				</div>
       			</a>
     		</div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    	<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav navList">
         			<li><a href="index.html">Home</a></li>
@@ -50,113 +49,172 @@
 	</nav>
 
 	<div class="container">
-		
-	</div>
-	<div class="container2">
-		<div class="commentSlide">
-			
+		<div class="technology">
+			<h2 id="tech">TECHNOLOGY</h2>
+			<ul class="nav1">
+	  			<li onclick="showLogin()">Sentiment Analysis</li>
+	  			<li onclick="showSignup()">Subjective Sentiment Analysis</li>
+	  			<li onclick="showForgotPassword()">Text Summarization</li>
+	  			<li onclick="showContactUs()">Semantic Similarity in Text</li>
+	  			<li onclick="showSubscribe()">Anaphoric Analysis</li>
+	  			<li onclick="showThankYou()">Named Entity Recognition (NER)</li>
+	  			<button class="demoButton">View Demo</button>
+			</ul>
+			<div class="wrapper">
+	  			<div class="rec-prism">
+	    			<div class="face face-top">
+	      				<div class="content">
+	        				<h2>Anaphoric Analysis</h2>
+	        				<small>
+	        					This interesting feature connects words that are used by your customer with some of the other words in the same text in platforms such as review sites, Facebook, twitter etc, to find relation and thereby understanding their emotion. Utilize this data to truly understand what your customers are saying.
+	        				</small>
+	      				</div>
+	    			</div>
+	    			<div class="face face-front">
+		      			<div class="content">
+		        			<h2>Sentiment Analysis</h2>
+		        			<small>
+		        				Understand what your customers say about your company or your product on social media or review forums. With the help of natural language processing you can now extract information pertaining to your brand. Know the intensity of customers like or dislike for your brand on a 10 point scale, monitor competition and the sentiment analysis from their customers. These valuable insights shall help in a creating strategy for the business that will reap results.
+		        			</small>
+		      			</div>
+			    	</div>
+				    <div class="face face-back">
+				      <div class="content">
+				        <h2>Text Summarization</h2>
+				        <small>Say bye-bye to long, drab information that eats into your valuable time. The effort is not just time-consuming and resource-heavy, but also prone to human errors. With the help of text summarization, you can now extract a summary of the most important points from the original data. Improve productivity of your team and focus on things that are important for you like better quality!
+				        </small>
+				      </div>
+				    </div>
+				    <div class="face face-bottom">
+				      <div class="content">
+				        <h2>Named Entity Recognition (NER)</h2>
+				        <small>
+				        	Named Entity recognition also referred as entity identification is an intelligent system that can be used to identify, sort and store textual content such as name titles of your customers, different organizations and their location. This comes handy when your team has to do due-diligence and are most useful for banks and financial institutions.
+				        </small>
+				      </div>
+				    </div>
+				    <div class="face face-left">
+				      <div class="content">
+				        <h2>Semantic Similarity in Text</h2>
+				        <small>
+				        	"If I had asked my customers what they wanted they would have said a faster horse" - Henry Ford
+				        	<br><br>
+							Sometimes what customers say need not necessarily be what they mean. Therefore it can be complex to understand and analyze data to really know what your customers want. With the help of semantic similarity, you can now identify relationships or connections that bind different words. Use this powerful feature to understand what your consumers say to improve your business.
+				        </small>
+				      </div>
+				    </div>
+				    <div class="face face-right">
+				      <div class="content">
+				        <h2>Subjective Sentiment Analysis</h2>
+				        <small>
+				        	Sentiment analysis showcases your customer’s opinion of your brand, it does not provide what your customers are really talking about. Subjective sentiment analysis provides keywords that are most likely used by customers to understand their viewpoint of the brand. Brand custodians/marketing team will now be able to get immense insights to improve the product and its communication.
+				        </small>
+				      </div>
+				    </div>
+		  		</div>
+			</div>
 		</div>
-		<div class="teamPic">
-			<div class="main-wrapper">
-	  			<div class="button">
-	    			<i class="material-icons" onclick="showButtons()">In</i>
-	  			</div>
-	  			<div class="main-wrapper-inside">
-	    			<img src="../img/vijay.jpg">
-	  			</div>
-	  			<!-- <div class="button-wrapper first">
-	    			<div class="button-inside first">
-	      				<i class="material-icons">chat</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper second">
-	    			<div class="button-inside second">
-	      				<i class="material-icons">phone</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper third">
-	    			<div class="button-inside third">
-	      				<i class="material-icons">LinkedIn</i>
-	    			</div> 
-	  			</div> -->
-			</div>
-			
-			<div class="main-wrapper">
-	  			<div class="button">
-	    			<i class="material-icons" onclick="showButtons()">In</i>
-	  			</div>
-	  			<div class="main-wrapper-inside">
-	    			<img src="../img/sendhil.jpg">
-	  			</div>
-	  			<!-- <div class="button-wrapper first">
-	    			<div class="button-inside first">
-	      				<i class="material-icons">chat</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper second">
-	    			<div class="button-inside second">
-	      				<i class="material-icons">phone</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper third">
-	    			<div class="button-inside third">
-	      				<i class="material-icons">LinkedIn</i>
-	    			</div> 
-	  			</div> -->
-			</div>
-
-			<div class="main-wrapper">
-	  			<div class="button">
-	    			<i class="material-icons" onclick="showButtons()">In</i>
-	  			</div>
-	  			<div class="main-wrapper-inside">
-	    			<img src="../img/pratheek.jpg">
-	  			</div>
-	  			<!-- <div class="button-wrapper first">
-	    			<div class="button-inside first">
-	      				<i class="material-icons">chat</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper second">
-	    			<div class="button-inside second">
-	      				<i class="material-icons">phone</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper third">
-	    			<div class="button-inside third">
-	      				<i class="material-icons">LinkedIn</i>
-	    			</div> 
-	  			</div> -->
-			</div>
-
-			<div class="main-wrapper">
-	  			<div class="button">
-	    			<i class="material-icons" onclick="showButtons()">In</i>
-	  			</div>
-	  			<div class="main-wrapper-inside">
-	    			<img src="../img/sagar.jpg">
-	  			</div>
-	  			<!-- <div class="button-wrapper first">
-	    			<div class="button-inside first">
-	      				<i class="material-icons">chat</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper second">
-	    			<div class="button-inside second">
-	      				<i class="material-icons">phone</i>
-	    			</div> 
-	  			</div>
-	  			<div class="button-wrapper third">
-	    			<div class="button-inside third">
-	      				<i class="material-icons">LinkedIn</i>
-	    			</div> 
-	  			</div> -->
-			</div>
-
-		</div>
-		
 	</div>
 
+	<div class="teamPic">
+		<div class="main-wrapper">
+	  		<div class="button">
+	    		<i class="material-icons" id="vj" onclick="showButtons('vj')">In</i>
+	  		</div>
+	  		<div class="main-wrapper-inside">
+	    		<img src="img/vijay.jpg">
+	  		</div>
+	  		<div class="button-wrapper first vj">
+	  			<button type="button" class="button-inside first">
+  					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+				</button>
+	  		</div>
+	  		<div class="button-wrapper second vj">
+	    		<div class="button-inside second">
+	      			<i class="material-icons">phone</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper third vj">
+	    		<div class="button-inside third">
+	      			<i class="material-icons">LinkedIn</i>
+	    		</div> 
+	  		</div>
+		</div>
+			
+		<div class="main-wrapper">
+  			<div class="button">
+	    		<i class="material-icons" id="sandy" onclick="showButtons('sandy')">In</i>
+	  		</div>
+	  		<div class="main-wrapper-inside">
+	    		<img src="img/sendhil.jpg">
+	  		</div>
+	 		<div class="button-wrapper first sandy">
+	   			<div class="button-inside first">
+	      			<i class="material-icons">chat</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper second sandy">
+	    		<div class="button-inside second">
+	      			<i class="material-icons">phone</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper third sandy">
+	    		<div class="button-inside third">
+	      			<i class="material-icons">LinkedIn</i>
+	    		</div> 
+	  		</div>
+		</div>
+
+		<div class="main-wrapper">
+	  		<div class="button">
+	   			<i class="material-icons" id="prat" onclick="showButtons('prat')">In</i>
+ 			</div>
+	  		<div class="main-wrapper-inside">
+	    		<img src="img/pratheek.jpg">
+	  		</div>
+	  		<div class="button-wrapper first prat">
+	    		<div class="button-inside first">
+	      			<i class="material-icons">chat</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper second prat">
+	    		<div class="button-inside second">
+	      			<i class="material-icons">phone</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper third prat">
+	    		<div class="button-inside third">
+	      			<i class="material-icons">LinkedIn</i>
+	    		</div> 
+	  		</div>
+		</div>
+
+		<div class="main-wrapper">
+			<div class="button">
+	    		<i class="material-icons" id="sagar" onclick="showButtons('sagar')">In</i>
+	  		</div>
+	  		<div class="main-wrapper-inside">
+	   			<img src="img/sagar.jpg">
+			</div>
+	  		<div class="button-wrapper first sagar">
+	    		<div class="button-inside first">
+	      			<i class="material-icons">chat</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper second sagar">
+	    		<div class="button-inside second">
+	      			<i class="material-icons">phone</i>
+	    		</div> 
+	  		</div>
+	  		<div class="button-wrapper third sagar">
+	    		<div class="button-inside third">
+	      			<i class="material-icons">LinkedIn</i>
+	    		</div> 
+	  		</div>
+		</div>
+
+	</div>
+	
 	<footer id="footerTag">
 		
 		<p>Coprights reserved @ Stride.ai</p>
@@ -164,5 +222,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
 </body>
 </html>
