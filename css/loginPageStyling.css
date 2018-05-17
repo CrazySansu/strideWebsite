@@ -1,0 +1,147 @@
+/*---------- login.html ----------*/
+.loginpage{
+	width: 60%;
+	margin: 8% auto;
+	position: relative;
+	padding-top: 8%;
+}
+
+.iconimg1{
+	position: absolute;
+	z-index: -1;
+	top: 8%;
+	left: 8%;
+	width: 146px;
+	height: 118px;
+	object-fit: contain;
+}
+
+.iconimg2{
+	padding-top: 8%;
+	position: absolute;
+	z-index: -1;
+	width: 189px;
+	height: 130px;
+	object-fit: contain;
+	right: 8%;
+	bottom: 0;
+}
+
+.loginForm{
+	background-color: #ffffff;
+	z-index: 1;
+	width: 60%;
+	margin: auto;
+	padding-top: 15px;
+  	text-align: center;
+	border-radius: 30px;
+	box-shadow: 0 5px 21px 0 rgba(37, 112, 255, 0.09);
+}
+
+.form{
+	z-index: 1;
+  	max-width: 80%;
+  	margin: 0 auto;
+  	padding: 45px 0px 15px;
+}
+
+.form input{
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	padding: 15px;
+	font-size: 14px;
+	font-family: Montserrat;
+}
+
+.form input:hover{
+	text-indent: 10px;
+}
+
+.loginForm h2{
+	font-family: Montserrat;
+  	line-height: normal;
+	color: #2570ff;
+	font-weight: bold;
+}
+
+.form button{
+	border-radius: 13.5px;
+	background-color: #2570ff;
+  	border: 0;
+  	padding: 10px 20px;
+  	color: #ffffff;
+  	font-size: 14px;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+  background: #4786ff;
+}
+
+.form p {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+  text-align: left;
+}
+
+.form p a{
+	color: #cccccc;
+	text-decoration: none;
+}
+
+#signuplink {
+	font-family: Montserrat;
+	font-size: 14px;
+	text-align: center;
+}
+
+#signuplink a{
+	color: #2570ff;
+}
+
+#helplink{
+	text-align: right;
+}
+
+@media(min-width: 769px) and (max-width: 1024px){
+	.iconimg1{
+		top: 2%;
+		left: 3%;
+	}
+	.iconimg2{
+		bottom: -2%;
+		right: 3%;
+	}
+}
+
+@media(min-width: 426px) and (max-width: 768px){
+	.loginpage{
+		width: 80%;
+	}
+
+	.iconimg1{
+		top: -2%;
+		left: 3%;
+	}
+	.iconimg2{
+		bottom: -2%;
+		right: 3%;
+	}
+}
+
+@media(max-width: 425px){
+	.loginpage{
+		width: 100%;
+	}
+
+	.iconimg1{
+		display: none;
+	}
+	.iconimg2{
+		display: none;
+	}
+	.loginForm{
+		width: 100%;
+	}
+}
