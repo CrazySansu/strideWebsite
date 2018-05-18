@@ -1,227 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="strideApp">
 <head>
 	<title>Stride | Text Analytics</title>
 	<link rel="shortcut icon" href="img/stride-badge.png">
 	
-	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- <meta name="description" content="Stride.ai helps business extract themes to supplement their terms of interest using tools like Texie to learn from data and translate text to insight.">
 	 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Sanskar Baid">
-	<script src="js/angular.min.js" type="text/javascript"></script>
-	<!-- <script src="js/app.js" type="text/javascript"></script> -->
 
+	<!-- <script src="js/angular.min.js"></script> -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
-<body ng-app="strideAI">
-	<nav class="navbar navbar-default navbar-fixed-top" id="headingTag">
-  		<div class="container-fluid" ng-controller="navbarTab">
-    	<!-- Brand and toggle get grouped for better mobile display -->
-    		<div class="navbar-header">
-      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        			<span class="sr-only">Toggle navigation</span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-      			</button>
-      			<a class="navbar-brand" href="index.html">
-      				<div id="strideLogo" >
-      					<img alt="StrideAI" id="white" src="img/logo-white.png">
-      					<img alt="StrideAI" id="logo" src="img/stride-badge.png">
-      				</div>
-      			</a>
-    		</div>
-    	<!-- Collect the nav links, forms, and other content for toggling -->
-    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      			<ul class="nav navbar-nav navList">
-        			<li><a href="index.html">Home</a></li>
-        			<li><a href="#">About Us</a></li>
-        			<li><a href="#">Technology</a></li>
-        			<li><a href="#">Solution</a></li>
-        			<li><a href="#">Team</a></li>
-        			<li><a href="#">Contact Us</a></li>
-		      	</ul>
-    		</div><!-- /.navbar-collapse -->
-  		</div><!-- /.container-fluid -->
-	</nav>
 
-	<div class="container">
-		<div class="technology">
-			<h2 id="tech">TECHNOLOGY</h2>
-			<ul class="nav1">
-	  			<li onclick="showLogin()">Sentiment Analysis</li>
-	  			<li onclick="showSignup()">Subjective Sentiment Analysis</li>
-	  			<li onclick="showForgotPassword()">Text Summarization</li>
-	  			<li onclick="showContactUs()">Semantic Similarity in Text</li>
-	  			<li onclick="showSubscribe()">Anaphoric Analysis</li>
-	  			<li onclick="showThankYou()">Named Entity Recognition (NER)</li>
-	  			<button class="demoButton">View Demo</button>
-			</ul>
-			<div class="wrapper">
-	  			<div class="rec-prism">
-	    			<div class="face face-top">
-	      				<div class="content">
-	        				<h2>Anaphoric Analysis</h2>
-	        				<small>
-	        					This interesting feature connects words that are used by your customer with some of the other words in the same text in platforms such as review sites, Facebook, twitter etc, to find relation and thereby understanding their emotion. Utilize this data to truly understand what your customers are saying.
-	        				</small>
-	      				</div>
-	    			</div>
-	    			<div class="face face-front">
-		      			<div class="content">
-		        			<h2>Sentiment Analysis</h2>
-		        			<small>
-		        				Understand what your customers say about your company or your product on social media or review forums. With the help of natural language processing you can now extract information pertaining to your brand. Know the intensity of customers like or dislike for your brand on a 10 point scale, monitor competition and the sentiment analysis from their customers. These valuable insights shall help in a creating strategy for the business that will reap results.
-		        			</small>
-		      			</div>
-			    	</div>
-				    <div class="face face-back">
-				      <div class="content">
-				        <h2>Text Summarization</h2>
-				        <small>Say bye-bye to long, drab information that eats into your valuable time. The effort is not just time-consuming and resource-heavy, but also prone to human errors. With the help of text summarization, you can now extract a summary of the most important points from the original data. Improve productivity of your team and focus on things that are important for you like better quality!
-				        </small>
-				      </div>
-				    </div>
-				    <div class="face face-bottom">
-				      <div class="content">
-				        <h2>Named Entity Recognition (NER)</h2>
-				        <small>
-				        	Named Entity recognition also referred as entity identification is an intelligent system that can be used to identify, sort and store textual content such as name titles of your customers, different organizations and their location. This comes handy when your team has to do due-diligence and are most useful for banks and financial institutions.
-				        </small>
-				      </div>
-				    </div>
-				    <div class="face face-left">
-				      <div class="content">
-				        <h2>Semantic Similarity in Text</h2>
-				        <small>
-				        	"If I had asked my customers what they wanted they would have said a faster horse" - Henry Ford
-				        	<br><br>
-							Sometimes what customers say need not necessarily be what they mean. Therefore it can be complex to understand and analyze data to really know what your customers want. With the help of semantic similarity, you can now identify relationships or connections that bind different words. Use this powerful feature to understand what your consumers say to improve your business.
-				        </small>
-				      </div>
-				    </div>
-				    <div class="face face-right">
-				      <div class="content">
-				        <h2>Subjective Sentiment Analysis</h2>
-				        <small>
-				        	Sentiment analysis showcases your customer’s opinion of your brand, it does not provide what your customers are really talking about. Subjective sentiment analysis provides keywords that are most likely used by customers to understand their viewpoint of the brand. Brand custodians/marketing team will now be able to get immense insights to improve the product and its communication.
-				        </small>
-				      </div>
-				    </div>
-		  		</div>
+<body>
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top" id="headingTag">
+	  		<div class="container-fluid">
+	    	<!-- Brand and toggle get grouped for better mobile display -->
+	    		<div class="navbar-header">
+	      			<a class="pull-left" href="index.html">
+      					<div id="logo-white"></div>
+      					<div id="logo-color"></div>
+	      			</a>
+	      			<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+	        			<span class="sr-only">Toggle navigation</span>
+	        			<span class="icon-bar"></span>
+	        			<span class="icon-bar"></span>
+	        			<span class="icon-bar"></span>
+	      			</button>
+	    		</div>
+	    	<!-- Collect the nav links, forms, and other content for toggling -->
+	    		<div class="collapse navbar-collapse" id="collapsable-nav">
+	      			<ul class="nav navbar-nav navbar-right" id="navList">
+	        			<li><a href="#platform">Platform</a></li>
+	        			<!-- <li><a href="#technology">Technology</a></li> -->
+	        			<li><a href="#solution">Solution</a></li>
+	        			<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Company
+          						<span class="caret"></span>
+          					</a>
+          					<ul class="dropdown-menu">
+            					<li><a href="#aboutus">About us</a></li>
+            					<li><a href="#team">Team</a></li>
+	        					<li><a href="#contactus">Contact Us</a></li>
+            					<li role="separator" class="divider"></li>
+            					<li><a href="#carrers">Carrers</a></li>
+          					</ul>
+        				</li>
+			      	</ul>
+	    		</div><!-- /.navbar-collapse -->
+	  		</div><!-- /.container-fluid -->
+		</nav>
+	</header>
+
+	<div class="content">
+		<div class="container">
+			<div id="platform">
+				<h2 class="title">PLATFORM</h2>
+				<hr class="titleLine">
+				<div id="platformTools">
+					<img alt="" src="">
+					<img alt="nluTool" id="nluTool" src="img/nluTools.png">
+					<img alt="" src="">
+				</div>
+				<div id="ipt"></div>
+				
+				<div id="nlu">
+					<p>
+						What separates our tools from most others, is our way of building these tools. At Stride we believe there are two ways to build modern NLP Software; the usual way, and the Stride way. What is this Stride way? We heavily focus on building tools that are intuitive, agile, and very easy to use. Each of our tool comes with a state-of-art base model and there is also a provision for users to train tools for specific tasks. The best part of this training is that it does NOT REQUIRE PROGRAMMING, but instead a simple user interface. This gives full control to the user, who has the best grasp of the problem at hand. Now, any one can build software, not just the skilled developers. That is what we call the Stride way.
+						<br><br>
+						Below are some of the most advanced NLU tools we offer:
+					</p>
+					<div id="nluList">
+						<!-- <p>These are some of the most advanced NLU tools we offer:</p> -->
+						<ul class="nav1">
+							<li onclick="showSentimentAnalysis()">Sentiment Analysis</li>
+							<li onclick="showSubjectiveSA()">Subjective Sentiment Analysis</li>
+							<li onclick="showTextSummarization()">Text Summarization</li>
+							<li onclick="showKeywordExtraction()">Semantic Keyword Exraction</li>
+							<li onclick="showSemanticSimilarity()">Semantic Similarity</li>
+						</ul>
+						<button class="demoButton">View Demo</button>
+					</div>
+					<div id="nluPrism">
+						<div class="recPrism">
+							<div class="face face-front">
+								<h4>Sentiment Analysis</h4>
+		        				<small>
+		        					Understand what your customers say about your company or your product on social media or review forums. With the help of natural language processing you can now extract information pertaining to your brand. Know the intensity of customers like or dislike for your brand on a 10 point scale, monitor competition and the sentiment analysis from their customers. These valuable insights shall help in a creating strategy for the business that will reap results.
+		        				</small>
+							</div>
+					 		<div class="face face-top">
+	      						<h4>Anaphoric Analysis</h4>
+	        					<small>
+	        						This interesting feature connects words that are used by your customer with some of the other words in the same text in platforms such as review sites, Facebook, twitter etc, to find relation and thereby understanding their emotion. Utilize this data to truly understand what your customers are saying.
+	        					</small>
+	      					</div>
+	      					<div class="face face-back">			      
+						        <h4>Text Summarization</h4>
+						        	<small>
+						        		Say bye-bye to long, drab information that eats into your valuable time. The effort is not just time-consuming and resource-heavy, but also prone to human errors. With the help of text summarization, you can now extract a summary of the most important points from the original data. Improve productivity of your team and focus on things that are important for you like better quality!
+						        	</small>
+						    </div>
+						    <div class="face face-left">
+						        <h4>Semantic Similarity in Text</h4>
+						    	<small>
+						        	"If I had asked my customers what they wanted they would have said a faster horse" - Henry Ford
+						        	<br><br>
+									Sometimes what customers say need not necessarily be what they mean. Therefore it can be complex to understand and analyze data to really know what your customers want. With the help of semantic similarity, you can now identify relationships or connections that bind different words. Use this powerful feature to understand what your consumers say to improve your business.
+						        </small>
+						    </div>
+						    <div class="face face-right">
+						        <h4>Subjective Sentiment Analysis</h4>
+						    	<small>
+						        	Sentiment analysis showcases your customer’s opinion of your brand, it does not provide what your customers are really talking about. Subjective sentiment analysis provides keywords that are most likely used by customers to understand their viewpoint of the brand. Brand custodians/marketing team will now be able to get immense insights to improve the product and its communication.
+						        </small>
+						    </div>
+						</div> 
+					</div>
+				</div>
+				
+				<div id="utility"></div>
 			</div>
-		</div>
-	</div>
+			<div id="solution">
+				<h2 class="title">SOLUTION</h2>
+				<hr class="titleLine">
+			</div>
 
-	<div class="teamPic">
-		<div class="main-wrapper">
-	  		<div class="button">
-	    		<i class="material-icons" id="vj" onclick="showButtons('vj')">In</i>
-	  		</div>
-	  		<div class="main-wrapper-inside">
-	    		<img src="img/vijay.jpg">
-	  		</div>
-	  		<div class="button-wrapper first vj">
-	  			<button type="button" class="button-inside first">
-  					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-				</button>
-	  		</div>
-	  		<div class="button-wrapper second vj">
-	    		<div class="button-inside second">
-	      			<i class="material-icons">phone</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper third vj">
-	    		<div class="button-inside third">
-	      			<i class="material-icons">LinkedIn</i>
-	    		</div> 
-	  		</div>
-		</div>
+			<div id="aboutus">
+				<h2 class="title">WHO WE ARE</h2>
+				<hr class="titleLine">
+				<h3>Stride.AI for Enterprise Process Automation</h3>
+				<p>
+					In layman’s terms, Stride automates the dull, boring, redundant tasks, at large organizations. And in the start-up lingo, Stride offers an AI platform for Enterprise Process Automation. Most banks and financial services are aware of RPA; we are the intelligent version of the same. By combining the power of AI and Natural Language Understanding, our mission is to augment human intelligence, the power of speed and scale.
+				</p>
+			</div>
+
+			<div id="team" class="team">
+				<h2 class="title">OUR TEAM</h2>
+				<hr class="titleLine">
+				<div class="main-wrapper">
+			 		<div class="teamPic"> 
+			 			<img src="img/vijay.jpg">
+			 			<span class="teamName">Vijay Nadadur<br>CEO, Co-Founder</span>
+			 		</div>
+			 		<button class="triggerContact" id="vj"> In </button>
+			 		<button class="button-inside call">
+			 			<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+			 		</button>
+			 		<button class="button-inside message">some</button>
+			 		<button class="button-inside linkedIn">some</button>
+				</div>
+				<div class="main-wrapper">
+			 		<div class="teamPic"> 
+			 			<img src="img/sendhil.jpg">
+			 			<span class="teamName">Sendhil Kumar<br>COO, Co-Founder</span>
+			 		</div>
+			 		<button class="triggerContact" id="sandy"> In </button>
+			 		<!-- <div class="button-inside call"> -->
+			 			<button class="button-inside call">
+			 				<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+			 			</button>
+			 		<!-- </div> -->
+			 		<button class="button-inside message">some</button>
+			 		<button class="button-inside linkedIn">some</button>
+				</div>
+				<div class="main-wrapper">
+			 		<div class="teamPic"> 
+			 			<img src="img/pratheek.jpg">
+			 			<span class="teamName">Pratheek M S<br>CTO</span>
+			 		</div>
+			 		<button class="triggerContact" id="prat"> In </button>
+			 		<!-- <div class="button-inside call"> -->
+			 			<button class="button-inside call">
+			 				<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+			 			</button>
+			 		<!-- </div> -->
+			 		<button class="button-inside message">some</button>
+			 		<button class="button-inside linkedIn">some</button>
+				</div>
+				<div class="main-wrapper">
+			 		<div class="teamPic"> 
+			 			<img src="img/sagar.jpg">
+			 			<span class="teamName">Sagar Rao<br>Member Technical Staff</span>
+			 		</div>
+			 		<button class="triggerContact" id="sagar"> In </button>
+			 		<!-- <div class="button-inside call"> -->
+			 			<button class="button-inside call">
+			 				<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+			 			</button>
+			 		<!-- </div> -->
+			 		<button class="button-inside message">some</button>
+			 		<button class="button-inside linkedIn">some</button>
+				</div>
+			</div>			
 			
-		<div class="main-wrapper">
-  			<div class="button">
-	    		<i class="material-icons" id="sandy" onclick="showButtons('sandy')">In</i>
-	  		</div>
-	  		<div class="main-wrapper-inside">
-	    		<img src="img/sendhil.jpg">
-	  		</div>
-	 		<div class="button-wrapper first sandy">
-	   			<div class="button-inside first">
-	      			<i class="material-icons">chat</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper second sandy">
-	    		<div class="button-inside second">
-	      			<i class="material-icons">phone</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper third sandy">
-	    		<div class="button-inside third">
-	      			<i class="material-icons">LinkedIn</i>
-	    		</div> 
-	  		</div>
-		</div>
-
-		<div class="main-wrapper">
-	  		<div class="button">
-	   			<i class="material-icons" id="prat" onclick="showButtons('prat')">In</i>
- 			</div>
-	  		<div class="main-wrapper-inside">
-	    		<img src="img/pratheek.jpg">
-	  		</div>
-	  		<div class="button-wrapper first prat">
-	    		<div class="button-inside first">
-	      			<i class="material-icons">chat</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper second prat">
-	    		<div class="button-inside second">
-	      			<i class="material-icons">phone</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper third prat">
-	    		<div class="button-inside third">
-	      			<i class="material-icons">LinkedIn</i>
-	    		</div> 
-	  		</div>
-		</div>
-
-		<div class="main-wrapper">
-			<div class="button">
-	    		<i class="material-icons" id="sagar" onclick="showButtons('sagar')">In</i>
-	  		</div>
-	  		<div class="main-wrapper-inside">
-	   			<img src="img/sagar.jpg">
+			<div id="contactus">
+				<h2 class="title">CONTACT US</h2>
+				<hr class="titleLine">
 			</div>
-	  		<div class="button-wrapper first sagar">
-	    		<div class="button-inside first">
-	      			<i class="material-icons">chat</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper second sagar">
-	    		<div class="button-inside second">
-	      			<i class="material-icons">phone</i>
-	    		</div> 
-	  		</div>
-	  		<div class="button-wrapper third sagar">
-	    		<div class="button-inside third">
-	      			<i class="material-icons">LinkedIn</i>
-	    		</div> 
-	  		</div>
 		</div>
-
 	</div>
 	
-	<footer id="footerTag">
-		
-		<p>Coprights reserved @ Stride.ai</p>
+	<footer class="panel-footer">
+		<div class="container">
+			<div class="row">
+				<!-- <section id="menubar" class="col-sm-4">
+					<ul>
+						<li>Technology</li>
+						<li>Company</li>
+						<li>Solutions</li>
+						<li>Career</li>
+					</ul>
+				</section> -->
+				<hr class="visible-xs">
+				<section id="address" class="col-sm-8">
+					<span> India: </span> 
+					#1A Block, 1st floor, CIL Layout, Sanjaynagar Main Road, Bengaluru - 560094
+					<br><br>
+					<span> USA: </span> 
+					4887 Greenway Road, Norcross, GA, 30071
+					
+				</section>
+			</div>
+		</div>
 	</footer>
+	<div class="text-center" id="copyright">
+		&copy; Copyrights reserved @ Stride.ai
+	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/app.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/angular.min.js"></script> -->
+	<script src="js/app.js"></script>
 </body>
 </html>
