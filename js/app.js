@@ -37,13 +37,43 @@ window.onscroll = function() {
 
 // --------- Platform Animation
 
-var nluTool = document.getElementById('nluTool').addEventListener('click',showNLU);
-
+var nluTool = document.getElementById('nluTool');
+nluTool.addEventListener('click',showNLU);
+var utilityTool = document.getElementById('utilityTool');
+utilityTool.addEventListener('click',showUtility);
+var iptTool = document.getElementById('iptTool');
+// iptTool.addEventListener('click',showIPT);
 
 function showNLU(){
-    // this.style.transform = "scale(1.5)";
-    document.getElementById('nlu').style.display = "block";
-    document.getElementById('nlu').style.transform = "scale(1)";
+    var tool = document.getElementById('nlu');
+    tool.style.display = "block";
+    // this.style.border = "2px solid #fff";
+    this.style.boxShadow = "4px 4px 25px #000"
+    this.style.fontSize = "1.5em";
+    this.style.transform = "scale(1.2)";
+    this.style.opacity = "1";
+    document.getElementById('utility').style.display = "none";
+    utilityTool.style.boxShadow = "0"
+    utilityTool.style.fontSize = "1em";
+    utilityTool.style.transform = "scale(1)";
+    utilityTool.style.opacity = "0.5";
+    iptTool.style.opacity = "0.5";
+
+}
+
+function showUtility(){
+    var tool = document.getElementById('utility');
+    tool.style.display = "block";
+    document.getElementById('nlu').style.display = "none";
+    nluTool.style.boxShadow = "0"
+    nluTool.style.fontSize = "1em";
+    nluTool.style.transform = "scale(1)";
+    nluTool.style.opacity = "0.5";
+    this.style.boxShadow = "4px 4px 25px #000"
+    this.style.fontSize = "1.5em";
+    this.style.transform = "scale(1.2)";
+    utilityTool.style.opacity = "1";
+    iptTool.style.opacity = "0.5";
 }
 
 
