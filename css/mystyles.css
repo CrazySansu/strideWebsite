@@ -649,14 +649,32 @@ body{
 }
 
 #nlpEngineer{
-    width: 60%;
+    width: 80%;
     margin: 30px auto;
     text-align: justify;
     line-height: 2;
     display: none;
     animation: showElement 0.5s ease-out;
+    /*width: auto;*/
 }
 
+#hiring{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#hiring p{
+    display: inline-block;
+    margin: 0;
+    width: auto;
+}
+
+#hiring img{
+    width: 200px;
+    height: 250px;
+}
 
 /*---------- Changes for Mobile devices ----------*/
 
