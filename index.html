@@ -1,5 +1,10 @@
+<!-- 
+	add H1 tag
+	edit the meta description tag
+ -->
+
 <!DOCTYPE html>
-<html lang="en" ng-app="strideApp">
+<html lang="en">
 <head>
 	<title>Stride | Text Analytics</title>
 	<link rel="shortcut icon" href="img/stride-badge.png">
@@ -65,15 +70,15 @@
 				<h2 class="title">PLATFORM</h2>
 				<hr class="titleLine">
 				<div id="platformTools">
-					<div id="iptTool">
-						<span>Information Processing Tool</span>
-					</div>
-					<div id="nluTool">
-						<span>NLU Tools</span>
-					</div>
-					<div id="utilityTool">
-						<span>Utility Tool</span>
-					</div>
+					<button id="iptTool">
+						<a>Information Processing Tool</a>
+					</button>
+					<button id="nluTool">
+						<a>NLU Tools</a>
+					</button>
+					<button id="utilityTool">
+						<a>Utility Tool</a>
+					</button>
 				</div>
 				<div id="ipt"></div>
 				
@@ -165,7 +170,7 @@
 				<hr class="titleLine">
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
-			 			<img src="img/vijay.jpg">
+			 			<img alt="Vijay, CEO" src="img/vijay.jpg">
 			 			<span class="teamName">Vijay Nadadur<br>CEO, Co-Founder</span>
 			 		</div>
 			 		<button class="triggerContact" id="vj">
@@ -183,7 +188,7 @@
 				</div>
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
-			 			<img src="img/sendhil.jpg">
+			 			<img alt="Sendhil, COO" src="img/sendhil.jpg">
 			 			<span class="teamName">Sendhil Kumar<br>COO, Co-Founder</span>
 			 		</div>
 			 		<button class="triggerContact" id="sandy">
@@ -201,7 +206,7 @@
 				</div>
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
-			 			<img src="img/pratheek.jpg">
+			 			<img alt="Pratheek, CTO" src="img/pratheek.jpg">
 			 			<span class="teamName">Pratheek M S<br>CTO</span>
 			 		</div>
 			 		<button class="triggerContact" id="prat">
@@ -219,11 +224,11 @@
 				</div>
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
-			 			<img src="img/sagar.jpg">
+			 			<img alt="Sagar,MTS" src="img/sagar.jpg">
 			 			<span class="teamName">Sagar Rao<br>Member Technical Staff</span>
 			 		</div>
 			 		<button class="triggerContact" id="sagar">
-			 			<span class="fa fa-user-o" aria-hidden="true"></span>
+			 			<span class="fa fa-binoculars" aria-hidden="true"></span>
 			 		</button>
 			 		<!-- <div class="button-inside call"> -->
 			 			<button class="button-inside call">
@@ -237,33 +242,37 @@
 				</div>
 			</div>			
 			
-			<div id="contactus">
+			<!-- <div id="contactus">
 				<h2 class="title">CONTACT US</h2>
 				<hr class="titleLine">
-			</div>
+			</div> -->
 		</div>
 	</div>
 	
 	<footer class="panel-footer">
 		<div class="container">
-			<div class="row">
-				<!-- <section id="menubar" class="col-sm-4">
-					<ul>
-						<li>Technology</li>
-						<li>Company</li>
-						<li>Solutions</li>
-						<li>Career</li>
-					</ul>
-				</section> -->
-				<hr class="visible-xs">
-				<section id="address" class="col-sm-8">
-					<span> India: </span> 
-					#1A Block, 1st floor, CIL Layout, Sanjaynagar Main Road, Bengaluru - 560094
-					<br><br>
-					<span> USA: </span> 
-					4887 Greenway Road, Norcross, GA, 30071
-					
-				</section>
+			<div id="contact" class="col-sm-6">
+				<div class="detail">
+				<span class="fa fa-envelope" aria-hidden="true"></span>
+				<b>e-mail : </b>
+				vrn@stride.ai
+				</div>
+				<!-- <br> -->
+				<div class="detail">
+				<span class="fa fa-phone" aria-hidden="true"></span>
+				<b>phone no. : </b>
+				xxx-xxxx-xxx
+				</div>
+			</div>
+			<hr class="visible-xs">
+			<div id="address" class="col-sm-6">
+				<span class="fa fa-address-card" aria-hidden="true"></span>
+				<br>
+				<b> India : </b> 
+				1st Floor, #1A Block, CIL Layout, Sanjaynagar Main Road, Bengaluru - 560094
+				<br><br>
+				<b> USA : </b> 
+				4887 Greenway Road, Norcross, GA, 30071
 			</div>
 		</div>
 	</footer>

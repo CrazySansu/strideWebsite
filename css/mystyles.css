@@ -1,3 +1,10 @@
+/*
+    :root does not work in IE8
+    border-radius is not supported by IE8
+    box-shadow not supported in IE8 and Safari 5.0
+    
+*/
+
 :root{
     --blue : #2570FF; 
     --violet: #BA25FF;
@@ -12,8 +19,9 @@
 
 body{
     background-color: #fff;
-    font-size: 16px;
-    color: #7d7d7d;
+    font-size: 1.6em;
+    /*color: #7d7d7d;*/
+    color: #000;
     font-family: 'Poppins', sans-serif;
     /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
@@ -43,7 +51,8 @@ body{
 }
 
 #logo-white{
-    background: url('../img/logo-white.png') round;
+    background: url('../img/logo-white.png');
+    background-size: cover;
     display: block;
     width: 180px;
     height: 60px;
@@ -51,7 +60,8 @@ body{
 }
 
 #logo-color{
-    background: url('../img/logo-color.png') round;
+    background: url('../img/nav-logo.png');
+    background-size: cover;
     display: none;
     width: 180px;
     height: 60px;
@@ -72,7 +82,7 @@ body{
 
 #navList li a{
     color: #fff;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 .navbar-header button.navbar-toggle{
@@ -83,7 +93,8 @@ body{
 }
 
 .navbar-header button.navbar-toggle:hover, .navbar-header button.navbar-toggle:focus{
-    background: var(--blue);
+    background-color: var(--blue);
+    background-color: #2570FF;
 }
 
 .navbar-header .icon-bar{
@@ -113,10 +124,12 @@ body{
 
 .navbar-default .navbar-nav .open a{
     background-color: var(--violet);
+    background-color: #BA25FF;
 }
 
 .dropdown-menu{
     background-color: var(--violet);
+    background-color: #BA25FF;
 }
 
 
@@ -131,7 +144,7 @@ body{
     /*width: 120px;*/
     color: #000;
     font-weight: bold;
-    font-size: 40pt;
+    font-size: 3.5em;
     margin-bottom: 0;
     text-align: left;
     clear: both;
@@ -159,9 +172,11 @@ body{
     display: inline-block;
     margin: 15px auto;
     padding: 5px;
+    /*transition: all .5s ease-in;*/
 }
 
-#platformTools div{
+#platformTools button{
+    border: 0;
     cursor: pointer;
     width: 150px;
     height: 150px;
@@ -171,18 +186,19 @@ body{
     text-align: center;
     display: flex;
     align-items: center;
-    transition: transform .5s ease-in;
+    transition: all .3s ease-in;
     /*justify-content: center;*/
 }
 
-#platformTools span{
+#platformTools a{
     color: #fff;
     width: 100%;
     text-align: center;
+    text-decoration: none;
 }
 
 #iptTool{
-    background-color: var(--red);
+    background-color: #E94C3C;
 }
 
 #nluTool{
@@ -193,21 +209,22 @@ body{
     background-color: #52BE80;
 }
 
-#nlu, #utility{
+#nlu, #utility, #ipt{
     width: 70%;
     margin: 0px auto;
     padding-bottom: 15px;
     display: none;
-    animation: sucess 1s ease-out;
+    /*transform: scale(0);*/
+    animation: showTool 0.5s ease-out;
 }
 
-@keyframes sucess {
-    from{transform: scale(0.7);}
+@keyframes showTool {
+    from{transform: scale(0.5);}
     to{transform: scale(1);}
 }
 
 #nluList{
-    background-color: var(--violet);
+    background-color: #BA25FF;
     width: 350px;
     display: inline-block;
     margin: 15px;
@@ -273,7 +290,7 @@ body{
     height: var(--prismHeight);
     padding: 20px;
     background: rgba(250,250,350,0.96);
-    border: 3px solid var(--blue);
+    border: 3px solid #2570FF ;
     border-radius: 3px;
     text-align: justify;
     /*color: #666;*/
@@ -282,7 +299,7 @@ body{
 .face h4{
     text-align: center;
     font-size: 1.5em;
-    color: var(--blue);
+    color: #2570FF;
 }
 
 .face small{
@@ -341,7 +358,7 @@ body{
 }
 
 #aboutus h3{
-    color: var(--blue);
+    color: #2570FF;
     text-align: center;
     font-weight: bold;
     margin: 30px 0;
@@ -397,7 +414,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.5em;
 }
 
 .main-wrapper .button-inside{
@@ -458,6 +475,9 @@ body{
 }
 
 
+/*---------- Contact Us Styling ----------*/
+
+
 /*---------- Footer bar Styling ----------*/
 
 
@@ -474,7 +494,7 @@ body{
     margin-bottom: 35px;
 }
 
-#menubar, #address{
+#menubar{
     line-height: 2;
     text-align: center;
 }
@@ -487,8 +507,17 @@ body{
     padding: 5px;
 }
 
-#address span{
-    font-size: 1.3em;
+
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#address span, #contact span{
+    /*color: #2570FF;*/
+    font-size: 3em;
+    padding: 10px;
 }
 
 #copyright{
@@ -529,7 +558,7 @@ body{
     }
     #navList li a{
         color: #fff;
-        font-size: 18px;
+        /*font-size: 18px;*/
     }
     #logo-white{
         width: 150px;
@@ -546,7 +575,7 @@ body{
         /*position: relative;*/
         display: none;
     }
-    #nlu{
+    #nlu ,#ipt, #utility{
         margin: 0 auto;
         padding: 0;
         width: 100%;

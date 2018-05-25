@@ -1,3 +1,5 @@
+// Document whole code properly
+
 $(function () {
     $("#navbarToggle").blur(function (event){
         var screenWidth = window.innerWidth;
@@ -42,40 +44,85 @@ nluTool.addEventListener('click',showNLU);
 var utilityTool = document.getElementById('utilityTool');
 utilityTool.addEventListener('click',showUtility);
 var iptTool = document.getElementById('iptTool');
-// iptTool.addEventListener('click',showIPT);
+iptTool.addEventListener('click',showIPT);
 
 function showNLU(){
     var tool = document.getElementById('nlu');
     tool.style.display = "block";
-    // this.style.border = "2px solid #fff";
     this.style.boxShadow = "4px 4px 25px #000"
-    this.style.fontSize = "1.5em";
     this.style.transform = "scale(1.2)";
     this.style.opacity = "1";
     document.getElementById('utility').style.display = "none";
-    utilityTool.style.boxShadow = "0"
+    utilityTool.style.boxShadow = "unset"
     utilityTool.style.fontSize = "1em";
     utilityTool.style.transform = "scale(1)";
     utilityTool.style.opacity = "0.5";
+    document.getElementById('ipt').style.display = "none";
+    iptTool.style.boxShadow = "unset"
+    iptTool.style.fontSize = "1em";
+    iptTool.style.transform = "scale(1)";
     iptTool.style.opacity = "0.5";
-
 }
 
 function showUtility(){
     var tool = document.getElementById('utility');
     tool.style.display = "block";
+    this.style.boxShadow = "4px 4px 25px #000"
+    this.style.transform = "scale(1.2)";
+    this.style.opacity = "1";
     document.getElementById('nlu').style.display = "none";
-    nluTool.style.boxShadow = "0"
+    nluTool.style.boxShadow = "unset"
     nluTool.style.fontSize = "1em";
     nluTool.style.transform = "scale(1)";
     nluTool.style.opacity = "0.5";
-    this.style.boxShadow = "4px 4px 25px #000"
-    this.style.fontSize = "1.5em";
-    this.style.transform = "scale(1.2)";
-    utilityTool.style.opacity = "1";
+    document.getElementById('ipt').style.display = "none";
+    iptTool.style.boxShadow = "unset"
+    iptTool.style.fontSize = "1em";
+    iptTool.style.transform = "scale(1)";
     iptTool.style.opacity = "0.5";
 }
 
+function showIPT(){
+    var tool = document.getElementById('ipt');
+    tool.style.display = "block";
+    this.style.boxShadow = "4px 4px 25px #000"
+    this.style.transform = "scale(1.2)";
+    this.style.opacity = "1";
+    document.getElementById('nlu').style.display = "none";
+    nluTool.style.boxShadow = "unset"
+    nluTool.style.fontSize = "1em";
+    nluTool.style.transform = "scale(1)";
+    nluTool.style.opacity = "0.5";
+    document.getElementById('utility').style.display = "none";
+    utilityTool.style.boxShadow = "unset"
+    utilityTool.style.fontSize = "1em";
+    utilityTool.style.transform = "scale(1)";
+    utilityTool.style.opacity = "0.5";
+}
+
+// nluTool.addEventListener('blur',hideTools);
+// utilityTool.addEventListener('blur',hideTools);
+// iptTool.addEventListener('blur',hideTools);
+
+function hideTools(){
+    nluTool.style.boxShadow = "unset"
+    nluTool.style.fontSize = "1em";
+    nluTool.style.transform = "scale(1)";
+    nluTool.style.opacity = "1";
+    document.getElementById('nlu').style.display = "none";
+
+    document.getElementById('utility').style.display = "none";
+    utilityTool.style.boxShadow = "unset"
+    utilityTool.style.fontSize = "1em";
+    utilityTool.style.transform = "scale(1)";
+    utilityTool.style.opacity = "1";
+    
+    document.getElementById('ipt').style.display = "none";
+    iptTool.style.boxShadow = "unset"
+    iptTool.style.fontSize = "1em";
+    iptTool.style.transform = "scale(1)";
+    iptTool.style.opacity = "1";
+} 
 
 // ---------- Animation for the NLU Prism
 
