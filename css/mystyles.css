@@ -20,21 +20,18 @@
 body{
     background-color: #fff;
     font-size: 1.6em;
-    /*line-height: ;*/
-    /*color: #7d7d7d;*/
     color: #000;
     font-family: 'Poppins', sans-serif;
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 
 .demoButton{
     border: 0;
-    padding: 5px 10px;
+    margin: 5px 10px;
+    padding: 10px 10px;
     font-size: 1.25em;
-    border-radius: 20px;
     background-color: #00C84F;
     color: #fff;
-    /*box-shadow: 0 2px 25px #fff;*/
+    box-shadow: 0 2px 25px #fff;
 }
 
 .demoButton:hover{
@@ -94,8 +91,8 @@ body{
 }
 
 .navbar-header button.navbar-toggle:hover, .navbar-header button.navbar-toggle:focus{
-    background-color: var(--blue);
-    background-color: #2570FF;
+    /*background-color: var(--blue);*/
+    /*background-color: #2570FF;*/
 }
 
 .navbar-header .icon-bar{
@@ -105,19 +102,13 @@ body{
 }
 
 #navList li:hover{
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
     border-bottom: 2px solid white;
 }
 
 #navList ul li{
-    transform: scale(0.8);
+    font-size: 12px;
 }
-
-#navList ul li:hover{
-    transform: scale(0.9);
-    border: 0;
-}
-
 
 .navbar-default .navbar-nav .open a:hover, .navbar-default .navbar-nav .open a:focus{
     background-color: #aa25ff;
@@ -131,6 +122,23 @@ body{
 .dropdown-menu{
     background-color: var(--violet);
     background-color: #BA25FF;
+    /*width: 200px;*/
+    /*padding: 0;*/
+}
+
+.navbar-default .navbar-nav .open a{
+    background-color: var(--violet);
+    background-color: #BA25FF;
+}
+
+.dropdown-menu li{
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.dropdown-menu li a: hover{
+    /*padding: 5px 0;*/
+    background-color: black !important;
 }
 
 
@@ -139,6 +147,10 @@ body{
 .content{
     margin-top: 90px;
     /*height: 500px;*/
+}
+
+#aboutus, #platform, #solution, #team{
+    margin-top: 5%;
 }
 
 .title{
@@ -187,7 +199,7 @@ body{
     width: 300px;
     height: 300px;
     border-radius: 30px;
-    /*float: left;*/
+    /*opacity: 0.9;*/
     margin: 15px;
     text-align: center;
     display: flex;
@@ -229,7 +241,7 @@ body{
     padding-bottom: 15px;
     display: none;
     /*transform: scale(0);*/
-    animation: showTool 0.5s ease-out;
+    animation: showElement 0.5s ease-out;
 }
 
 #detailnlu{
@@ -239,11 +251,62 @@ body{
     display: none;
 }
 
-@keyframes showTool {
+@keyframes showElement {
     from{transform: scale(0.5);}
     to{transform: scale(1);}
 }
 
+#ipt{
+
+}
+
+#iptDisplay{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin: 30px auto;
+}
+
+.iptComponent{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#iptComponent1{
+    box-shadow: 1px 10px #2540FF;
+    background-color: #2570FF;
+    top: 0;
+    left: 0;
+}
+
+#iptComponent2{
+    box-shadow: 1px 10px #FFB002;
+    background-color: #FFC532;
+    top: 0;
+    right: 0;
+}
+
+#iptComponent3{
+    background-color: #EF7B22;
+    box-shadow: 1px 10px #EF5B00;
+    bottom: 0;
+    left: 0;
+}
+
+#iptComponent4{
+    background-color: #FF5656;
+    box-shadow: 1px 10px #BF5656;
+    bottom: 0;
+    right: 0;
+}
 #nluList{
     background-color: #BA25FF;
     width: 350px;
@@ -253,6 +316,10 @@ body{
     height: 450px;
     padding-top: 30px;
     float: left;
+}
+
+#nluList a{
+    font-size: 1em;
 }
 
 #nlu p{
@@ -339,10 +406,10 @@ body{
     transform: rotate(0deg) translateZ(160px);
 }
 
-.face-top{ 
+/*.face-top{ 
     height: 320px;
     transform: rotateX(90deg) translateZ(160px); 
-}
+}*/
 
 .face-back{ 
     transform: rotateY(180deg) translateZ(160px); 
@@ -353,7 +420,7 @@ body{
 }
 
 .face-left{ 
-    transform: rotateY(-90deg) translateZ(160px); 
+    transform: rotateY(270deg) translateZ(160px); 
 }
 
 .face-bottom{ 
@@ -401,11 +468,27 @@ body{
 /*---------- Solution Styling ----------*/
 #solution{
     line-height: 2;
+    text-align: justify;
 }
 
-#solutionText{
+.sol{
     width: 90%;
     margin: 15px auto;
+}
+
+.sol h3{
+    color: #2570FF;
+    font-weight: bold;
+}
+
+.pager li a{
+    background-color: #2570FF;
+    color: #fff;
+}
+
+.pager li a:focus, .pager li a:hover{
+    background-color: #fff;
+    color: #2570FF;
 }
 
 /*---------- Team Styling ----------*/
@@ -453,58 +536,24 @@ body{
     font-size: 1.2em;
 }
 
-/*.main-wrapper .button-inside{
-    width: 50px;
-    height: 50px;
-    bottom: 3px;
-    right: 3px; 
-    z-index: 5;
-    transition: transform 400ms cubic-bezier(0.07, 1.1, 0.28, 1.01);
-    cursor: pointer;
-}*/
-
 .triggerContact{
     width: 45px;
     height: 45px;
     bottom: 0;
     right: 0;
-    z-index: 6;
-    /*transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1); */
+    padding: 0;
     box-shadow: -1px 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-.triggerContact a span{
+.triggerContact a{
+    text-decoration: none;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
 }
-
-/*.button-inside.animation{
-    transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
-    will-change: transform;
-}
-
-.button-inside.call.animation{
-    transform: rotate(-36deg) translateX(60px) translateY(-30px);
-}
-
-.call span{
-    transform: rotate(36deg);
-}
-
-.button-inside.message.animation{
-    transform: rotate(-68deg) translateX(120px) translateY(-30px);
-}
-
-.message span{
-    transform: rotate(68deg);
-}
-
-.button-inside.linkedIn.animation{
-    transform: rotate(-90deg) translateX(160px) translateY(-30px);
-}
-
-.linkedIn span{
-    transform: rotate(90deg);
-}*/
 
 .teamName{
     position: absolute;
@@ -554,7 +603,7 @@ body{
     justify-content: left;
 }
 
-#address span, #contact span{
+#address span, #contactus span{
     /*color: #2570FF;*/
     font-size: 3em;
     padding: 10px;
@@ -565,6 +614,49 @@ body{
     color: #fff;
     padding: 5px 0;
 }
+
+
+/*---------- careers.html ------------*/
+#career p{
+    text-align: justify;
+    width: 80%;
+    margin: 30px auto;
+}
+
+#joinTeam{
+    margin-top: 50px;
+    color: #2570FF;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px #000;
+}
+
+#jobs{
+    border: 2px solid #52BE80;
+    text-align: center;
+    width: 200px;
+    margin: 30px auto;
+}
+
+#positions{
+    padding:10px;
+    cursor: pointer;
+    background-color: #52BE80;
+}
+
+#location{
+    padding: 10px;
+}
+
+#nlpEngineer{
+    width: 60%;
+    margin: 30px auto;
+    text-align: justify;
+    line-height: 2;
+    display: none;
+    animation: showElement 0.5s ease-out;
+}
+
 
 /*---------- Changes for Mobile devices ----------*/
 
@@ -609,6 +701,17 @@ body{
         width: 150px;
         height: 50px;
         margin: 15px 15px;
+    }
+    #platformTools{
+        display: block;
+        padding: 0 10px;
+    }
+    #platformTools button{
+        position: relative;
+        margin: 20px 0;
+    }
+    #iptTool, #nluTool, #utilityTool{
+        left: 0;
     }
     #nluPrism{
         /*margin: 0;*/

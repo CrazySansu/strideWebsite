@@ -45,7 +45,19 @@
 	      			<ul class="nav navbar-nav navbar-right" id="navList">
 	        			<li><a href="#platform">Platform</a></li>
 	        			<!-- <li><a href="#technology">Technology</a></li> -->
-	        			<li><a href="#solution">Solution</a></li>
+	        			<!-- <li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Solution
+          						<span class="caret"></span>
+          					</a>
+          					<ul class="dropdown-menu">
+            					<li><a href="#collMgmt">Collateral Management</a></li>
+            					<li><a href="#kyc">KYC</a></li>
+	        					<li><a href="#npmCont">NPM Contract Summarization</a></li>
+            					<li><a href="#profitLoss">Profit-Loss Statement Processing</a></li>
+            					<li><a href="#fundsAuto">Funds Onboarding Automation</a></li>
+          					</ul>
+        				</li> -->
+        				<li><a href="#solution">Solutions</a></li>
 	        			<li class="dropdown">
           					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Company
           						<span class="caret"></span>
@@ -55,9 +67,10 @@
             					<li><a href="#team">Team</a></li>
 	        					<li><a href="#contactus">Contact Us</a></li>
             					<li role="separator" class="divider"></li>
-            					<li><a href="#carrers">Careers</a></li>
+            					<li><a href="careers.html">Careers</a></li>
           					</ul>
         				</li>
+        				<!-- <button class="demoButton">Request Demo</button> -->
 			      	</ul>
 	    		</div><!-- /.navbar-collapse -->
 	  		</div><!-- /.container-fluid -->
@@ -88,7 +101,24 @@
 					<button id="utilityTool">
 						<a>Utility Tool</a>
 					</button>
-					<div id="ipt"></div>
+
+					<div id="ipt">
+						The four core components which power our Information Processing Tools are:
+						<div id="iptDisplay">
+							<div class="iptComponent" id="iptComponent1">
+								<p>Information Sourcing</p>
+							</div>
+							<div class="iptComponent" id="iptComponent2">
+								<p>Information Extraction</p>
+							</div>
+							<div class="iptComponent" id="iptComponent3">
+								<p>Information Syndication</p>
+							</div>
+							<div class="iptComponent" id="iptComponent4">
+								<p>Report Generation</p>
+							</div>
+						</div>
+					</div>
 				
 					<div id="nlu">
 						
@@ -98,10 +128,12 @@
 								<li onclick="showSentimentAnalysis()">Sentiment Analysis</li>
 								<li onclick="showSubjectiveSA()">Subjective Sentiment Analysis</li>
 								<li onclick="showTextSummarization()">Text Summarization</li>
-								<li onclick="showKeywordExtraction()">Semantic Keyword Exraction</li>
+								<!-- <li onclick="showKeywordExtraction()">Semantic Keyword Exraction</li> -->
 								<li onclick="showSemanticSimilarity()">Semantic Similarity</li>
 							</ul>
-							<button class="demoButton">View Demo</button>
+							<a href="https://stride.ai/texsie/">
+								<button class="demoButton">View Demo</button>
+							</a>
 						</div>
 						<div id="nluPrism">
 							<div class="recPrism">
@@ -111,12 +143,12 @@
 			        					Understand what your customers say about your company or your product on social media or review forums. With the help of natural language processing you can now extract information pertaining to your brand. Know the intensity of customers like or dislike for your brand on a 10 point scale, monitor competition and the sentiment analysis from their customers. These valuable insights shall help in a creating strategy for the business that will reap results.
 			        				</small>
 								</div>
-						 		<div class="face face-top">
+						 		<!-- <div class="face face-top">
 		      						<h4>Anaphoric Analysis</h4>
 		        					<small>
 		        						This interesting feature connects words that are used by your customer with some of the other words in the same text in platforms such as review sites, Facebook, twitter etc, to find relation and thereby understanding their emotion. Utilize this data to truly understand what your customers are saying.
 		        					</small>
-		      					</div>
+		      					</div> -->
 		      					<div class="face face-back">			      
 							        <h4>Text Summarization</h4>
 							        	<small>
@@ -168,19 +200,153 @@
 			<div id="solution">
 				<h2 class="title">SOLUTION</h2>
 				<hr class="titleLine">
-				<div id="solutionText">
-					<h3> Process Automation :</h3>
-					<p>Stride’s intelligent automation platform is designed for the modern FI's, it helps Financial Institutions reduce the turnaround time for the various complex workflows which are complex and involves processing unstructured data like texts, images etc.
-					</p>
-					<ul>
-						<li>Our solutions include :<br>
-							Information Extraction and Analysis, Information Classification, Information Discovery, Summarization and Sentiment Analyzer.
-						</li>
-						<li>Enhanced operational efficiency</li>
-						<li>High scalability,accuracy and business agility</li>
-						<li>Reduced operational costs & Regulatory compliance</li>
-					</ul>
+				
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+				  	<ol class="carousel-indicators">
+				    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    	<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				    	<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				  	</ol>
+
+				  	<!-- Wrapper for slides -->
+				  	<div class="carousel-inner" role="listbox">
+				    	<div class="item active">
+				    		<div id="collMgmt" class="sol">
+								<h3>Collateral Management</h3>
+								<b>Description</b>
+								<p>
+									ISDA (International Swaps and Derivatives Association) Master Agreements are a standard format agreement that govern the trade of over-the-counter (OTC) derivatives. The two trading parties negotiate the schedules and annexes. These negotiated variables must be captured with 100% accuracy in the collateral system in order to achieve a reliable collateral management process.
+								</p>
+								<p>
+									Stride has a built a smart information processing platform that can read, interpret, extract and summarise the content held within ISDA CSAs and other legal documents. It converts unstructured data into structured output, in a fraction of the time it takes a human – and with a higher degree of accuracy
+								</p>
+								<b>Business Problem: </b>
+								<p>
+									1. Highly manual intensive process<br>
+									2. Process turnaround time is high
+								</p>
+								<b>Input: </b>
+								<p>ISDA agreements (PDF/Scanned images)</p>
+								<b>Output: </b>
+								<p>
+									Intelligent extraction of all the negotiated variables.
+								</p>
+							</div>
+				    	</div>
+				    	<div class="item">
+				    		<div id="kyc" class="sol">
+								<h3>KYC (Know Your Customer)</h3>
+								<b>Description</b>
+								<p>
+									Stride KYC automation framework automate all the critical steps in the KYC process.
+								</p>
+								<b>Business Problem: </b>
+								<p>
+									1. Rising cost of KYC compliance <br>
+									2. High number of regulations to comply<br>
+									3. Steep fines for non compliance<br>
+									4. Highly manual intensive process<br>
+									5. KYC analysts spend too much time in information sourcing and extraction but less time in quality checks
+								</p>
+								<b>Input: </b>
+								<p>
+									1. Entity Name <br>
+									2. Country <br>
+									3. Company type(categories like Listed, Registered etc)<br>
+									4. Annual Report(if not sourced)
+								</p>
+								<b>Output: </b>
+								<p>
+									A comprehensive KYC report which can be submitted to the auditors.
+								</p>
+							</div>
+				    	</div>
+				    	<div class="item">
+				    		<div id="npmCont" class="sol">
+								<h3> NPM Contract Summarization</h3>
+								<b>Description</b>
+								<p>
+									This tool takes several contracts pertaining to private securities and eliminates the need for a hands-on reentry of data using intelligent information extraction.
+								</p>
+								<b>Business Problem: </b>
+								<p>
+									Straight Through Processing (STP) is highly desired in financial services organizations as delays prove costly during the processing period. With this in mind, NPM team wanted to minimize human intervention in processing contracts pertaining to Capital Markets.
+								</p>
+								<b>Input: </b>
+								<p>Set of Contracts (PDF Document(s))
+								</p>
+								<b>Output: </b>
+								<p>
+									Summarized Liquidity report in various formats.
+								</p>
+							</div>
+				    	</div>
+				    	<div class="item">
+				    		<div id="profitLoss" class="sol">
+								<h3>Profit-Loss Statement Processing</h3>
+								<b>Description</b>
+								<p>
+									This tool takes several financial statement documents and accurately extracts Assets, Liabilities, Profit &amp; Loss reports in seconds.
+								</p>
+								<b>Business Problem: </b>
+								<p>
+									Banks spend a lot time in re-entering the data from Profit-Loss statement, into various applications. The goal here is to eliminate the delays caused by human interface in data manipulation.
+								</p>
+								<b>Input: </b>
+								<p>Financial Statement Document
+								</p>
+								<b>Output: </b>
+								<p>
+									Summarized Financial report in various formats.
+								</p>
+							</div>
+				    	</div>
+				    	<div class="item">
+				    		<div id="fundsAuto" class="sol">
+								<h3>Funds Onboarding Automation</h3>
+								<b>Description</b>
+								<p>
+									Client Onboarding has been characterized by repetitive data entry and extensive paperwork, making it an unpleasant chore for financial advisors and their support teams.
+								</p>
+								<p>
+									Stride’s AI powered solution for client onboarding reduces the administrative tasks of the onboarding team by helping them gather the key insights quickly and complete the onboarding, ensuring good customer experience.
+								</p>
+								<b>Business Problem: </b>
+								<p>
+									1. Average onboarding time is high<br>
+									2. Delayed onboarding leads to loss of customer<br>
+									3. Onboarding document in multiple languages
+								</p>
+								<b>Input: </b>
+								<p>Fund prospectus (a PDF file ranging from 50 to 900 pages)
+								</p>
+								<b>Output: </b>
+								<p>
+									Intelligent extraction of key data points to initiate the onboarding process.
+								</p>
+							</div>
+				    	</div>
+				  	</div>
+
+				  	<!-- Controls -->
+				  	<!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    	<span class="sr-only">Previous</span>
+				  	</a>
+				  	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    	<span class="sr-only">Next</span>
+				  	</a> -->
 				</div>
+				<nav aria-label="...">
+  					<ul class="pager">
+						<li><a href="#carousel-example-generic" data-slide="prev" href="#">Previous</a></li>
+						<li><a href="#carousel-example-generic" data-slide="next" href="#">Next</a></li>
+					</ul>
+				</nav>
 			</div>
 
 			<div id="team" class="team">
@@ -192,132 +358,66 @@
 			 			<span class="teamName">Vijay Nadadur<br>CEO, Co-Founder</span>
 			 		</div>
 			 		<button class="triggerContact" id="vj">
-			 			<!-- <span class="glyphicon glyphicon-user" aria-hidden="true"></span> -->
-			 			<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
 			 			<a href="https://www.linkedin.com/in/vijaykant-nadadur-2769b2b" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
 			 		</button>
-			 		<!-- <button class="button-inside call"> -->
-			 			<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside message"> -->
-			 			<!-- <span class="fa fa-twitter" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside linkedIn">
-			 			<span>some</span>
-			 		</button> -->
 				</div>
+
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
 			 			<img alt="Sendhil, COO" src="img/sendhil.jpg">
 			 			<span class="teamName">Sendhil Kumar<br>COO, Co-Founder</span>
 			 		</div>
 			 		<button class="triggerContact" id="sandy">
-			 			<!-- <span class="glyphicon glyphicon-send" aria-hidden="true"></span> -->
-			 			<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
 			 			<a href="https://www.linkedin.com/in/senthil-kumar-a101009" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-
 			 		</button>
-			 		<!-- <div class="button-inside call"> -->
-			 			<!-- <button class="button-inside call"> -->
-			 				<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
-			 			<!-- </button> -->
-			 		<!-- </div> -->
-			 		<!-- <button class="button-inside message"> -->
-			 			<!-- <span class="fa fa-twitter" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside linkedIn">some</button> -->
 				</div>
+				
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
 			 			<img alt="Pratheek, CTO" src="img/pratheek.jpg">
 			 			<span class="teamName">Pratheek M S<br>CTO</span>
 			 		</div>
 			 		<button class="triggerContact" id="prat">
-			 			<!-- <span class="fa fa-bullhorn" aria-hidden="true"></span> -->
 			 			<a href="https://in.linkedin.com/in/pratheekms" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 			<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
 			 		</button>
-			 		<!-- <div class="button-inside call"> -->
-			 			<!-- <button class="button-inside call"> -->
-			 				<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
-			 			<!-- </button> -->
-			 		<!-- </div> -->
-			 		<!-- <button class="button-inside message"> -->
-			 			<!-- <span class="fa fa-twitter" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside linkedIn">some</button> -->
 				</div>
+
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
 			 			<img alt="Sagar,MTS" src="img/sagar.jpg">
 			 			<span class="teamName">Sagar Rao<br>Member Technical Staff</span>
 			 		</div>
 			 		<button class="triggerContact" id="sagar">
-			 			<!-- <span class="fa fa-binoculars" aria-hidden="true"></span> -->
 			 			<a href="https://in.linkedin.com/in/sagar-rao-b6b26669" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 			<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
 			 		</button>
-			 		<!-- <div class="button-inside call"> -->
-			 			<!-- <button class="button-inside call"> -->
-			 				<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
-			 			<!-- </button> -->
-			 		<!-- </div> -->
-			 		<!-- <button class="button-inside message"> -->
-			 			<!-- <span class="fa fa-twitter" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside linkedIn">some</button> -->
 				</div>
+
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
-			 			<img alt="Sagar,MTS" src="img/Colin.jpg">
+			 			<img alt="Colin" src="img/Colin.jpg">
 			 			<span class="teamName">Colin Wallace</span>
 			 		</div>
 			 		<button class="triggerContact" id="colin">
-			 			<!-- <span class="fa fa-binoculars" aria-hidden="true"></span> -->
 			 			<a href="https://www.linkedin.com/in/colin-wallace-6a24115" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 			<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
 			 		</button>
-			 		<!-- <div class="button-inside call"> -->
-			 			<!-- <button class="button-inside call"> -->
-			 				<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
-			 			<!-- </button> -->
-			 		<!-- </div> -->
-			 		<!-- <button class="button-inside message"> -->
-			 			<!-- <span class="fa fa-twitter" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside linkedIn">some</button> -->
 				</div>
+
 				<div class="main-wrapper">
 			 		<div class="teamPic"> 
-			 			<img alt="Sagar,MTS" src="img/Iain.jpg">
+			 			<img alt="Iain" src="img/Iain.jpg">
 			 			<span class="teamName">Iain Wallace</span>
 			 		</div>
 			 		<button class="triggerContact" id="iain">
-			 			<!-- <span class="fa fa-binoculars" aria-hidden="true"></span> -->
 			 			<a href="https://www.linkedin.com/in/iain-wallace-8068441/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
 			 		</button>
-			 		<!-- <div class="button-inside call"> -->
-			 			<!-- <button class="button-inside call"> -->
-			 				<!-- <span class="fa fa-linkedin" aria-hidden="true"></span> -->
-			 			<!-- </button> -->
-			 		<!-- </div> -->
-			 		<!-- <button class="button-inside message"> -->
-			 			<!-- <span class="fa fa-twitter" aria-hidden="true"></span> -->
-			 		<!-- </button> -->
-			 		<!-- <button class="button-inside linkedIn">some</button> -->
 				</div>
-			</div>			
-			
-			<!-- <div id="contactus">
-				<h2 class="title">CONTACT US</h2>
-				<hr class="titleLine">
-			</div> -->
+			</div>
 		</div>
 	</div>
 	
 	<footer class="panel-footer">
 		<div class="container">
-			<div id="contact" class="col-sm-6">
+			<div id="contactus" class="col-sm-6">
 				<div class="detail">
 				<span class="fa fa-envelope" aria-hidden="true"></span>
 				<b>e-mail : </b>

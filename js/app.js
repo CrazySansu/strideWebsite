@@ -12,15 +12,6 @@ $(function () {
     $("#navbarToggle").click(function (event){
         $('.content').css("margin-top",350);
     });
-
-    // $('.dropdown').hover(
-    //     function () {
-    //         $(this).toggleClass('open');
-    //     },
-    //     function() {
-    //         $(this).toggleClass('open');
-    //     }
-    // );
 });
 
 window.onscroll = function() {
@@ -99,7 +90,7 @@ function showUtility(){
 function showIPT(){
     showTool();
     var tool = document.getElementById('ipt');
-    // tool.style.display = "block";
+    tool.style.display = "block";
     this.style.boxShadow = "4px 4px 25px #000"
     this.style.transform = "scale(0.6)";
     this.style.opacity = "1";
@@ -113,10 +104,6 @@ function showIPT(){
     utilityTool.style.transform = "scale(0.5)";
     utilityTool.style.opacity = "0.5";
 }
-
-// nluTool.addEventListener('blur',hideTools);
-// utilityTool.addEventListener('blur',hideTools);
-// iptTool.addEventListener('blur',hideTools);
 
 function hideTools(){
     nluTool.style.boxShadow = "unset"
@@ -141,7 +128,7 @@ function hideTools(){
 // ---------- Animation for the NLU Prism
 
 let prism = document.querySelector(".recPrism");
-console.log(prism);
+// console.log(prism);
 
 function showSubjectiveSA(){
     prism.style.transform = "translateZ(-150px) rotateY( -90deg)";
@@ -153,69 +140,16 @@ function showTextSummarization(){
     prism.style.transform = "translateZ(-150px) rotateY( -180deg)";
 }
 
-function showKeywordExtraction(){
-    prism.style.transform = "translateZ(-150px) rotateX( -90deg)";
-}
+// function showKeywordExtraction(){
+//     prism.style.transform = "translateZ(-150px) rotateX( -90deg)";
+// }
 
 function showSemanticSimilarity(){
-    prism.style.transform = "translateZ(-150px) rotateY( 90deg)";
+    prism.style.transform = "translateZ(-150px) rotateY( -270deg)";
 }
 
 function showBottomSide(){
     prism.style.transform = "translateZ(-150px) rotateX( 90deg)";
 }
 
-
-// ---------- Animation js code for contact coming out from pic
-
-// document.querySelector("#vj").addEventListener('click', showButtons);
-// document.querySelector("#sandy").addEventListener('click', showButtons);
-// document.querySelector("#prat").addEventListener('click', showButtons);
-// document.querySelector("#sagar").addEventListener('click', showButtons);
-// document.querySelector("#colin").addEventListener('click', showButtons);
-// document.querySelector("#iain").addEventListener('click', showButtons);
-
-
-// document.querySelector("#vj").addEventListener('blur', hideButtons);
-// document.querySelector("#sandy").addEventListener('blur', hideButtons);
-// document.querySelector("#prat").addEventListener('blur', hideButtons);
-// document.querySelector("#sagar").addEventListener('blur', hideButtons);
-// document.querySelector("#colin").addEventListener('blur', showButtons);
-// document.querySelector("#iain").addEventListener('blur', showButtons);
-
-// function showButtons(){
-//     var btnWrapper = this.parentElement.querySelectorAll('.button-inside');
-//     // console.log(this);
-    
-//     if(this.classList.contains('animation')) {
-//         this.classList.remove('animation');
-//     } else {
-//         this.classList.add('animation');
-//     }
-
-//     for (i = 0; i < btnWrapper.length; i++ ) {
-//         if(btnWrapper[i].classList.contains('animation')){
-//             btnWrapper[i].classList.remove('animation');   
-//         } else {
-//             btnWrapper[i].classList.add('animation');
-//         } 
-//     }
-// }
-
-// function hideButtons(){
-//     var btnWrapper = this.parentElement.querySelectorAll('.button-inside');
-//     this.classList.remove('animation');
-
-//     for (i = 0; i < btnWrapper.length; i++ ) {
-//         btnWrapper[i].classList.remove('animation'); 
-//     }
-// }
-
-// (function(){
-//     'use strict';
-//     var app = angular.module('strideApp',[]);
-//     app.controller('name',function($scope){         //ng-controller='name' in html
-
-//     });
-// })();
-
+// --------------- careers.html -----------------
