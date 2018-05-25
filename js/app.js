@@ -13,14 +13,14 @@ $(function () {
         $('.content').css("margin-top",350);
     });
 
-    $('.dropdown').hover(
-        function () {
-            $(this).toggleClass('open');
-        },
-        function() {
-            $(this).toggleClass('open');
-        }
-    );
+    // $('.dropdown').hover(
+    //     function () {
+    //         $(this).toggleClass('open');
+    //     },
+    //     function() {
+    //         $(this).toggleClass('open');
+    //     }
+    // );
 });
 
 window.onscroll = function() {
@@ -46,57 +46,71 @@ utilityTool.addEventListener('click',showUtility);
 var iptTool = document.getElementById('iptTool');
 iptTool.addEventListener('click',showIPT);
 
+function showTool(){
+    iptTool.style.transform = "scale(0.5)";
+    nluTool.style.transform = "scale(0.5)";
+    utilityTool.style.transform = "scale(0.5)";
+
+    iptTool.style.left = "0";
+    nluTool.style.left = "0";
+    utilityTool.style.left = "0";
+
+    iptTool.style.top = "30px";
+    nluTool.style.top = "200px";
+    utilityTool.style.top = "380px";
+}
+
 function showNLU(){
+    showTool();
     var tool = document.getElementById('nlu');
     tool.style.display = "block";
+    document.getElementById('detailnlu').style.display = "block";
     this.style.boxShadow = "4px 4px 25px #000"
-    this.style.transform = "scale(1.2)";
+    this.style.transform = "scale(0.6)";
     this.style.opacity = "1";
     document.getElementById('utility').style.display = "none";
     utilityTool.style.boxShadow = "unset"
-    utilityTool.style.fontSize = "1em";
-    utilityTool.style.transform = "scale(1)";
+    utilityTool.style.transform = "scale(0.5)";
     utilityTool.style.opacity = "0.5";
     document.getElementById('ipt').style.display = "none";
     iptTool.style.boxShadow = "unset"
-    iptTool.style.fontSize = "1em";
-    iptTool.style.transform = "scale(1)";
+    iptTool.style.transform = "scale(0.5)";
     iptTool.style.opacity = "0.5";
 }
 
 function showUtility(){
+    showTool();
     var tool = document.getElementById('utility');
     tool.style.display = "block";
     this.style.boxShadow = "4px 4px 25px #000"
-    this.style.transform = "scale(1.2)";
+    this.style.transform = "scale(0.6)";
     this.style.opacity = "1";
     document.getElementById('nlu').style.display = "none";
+    document.getElementById('detailnlu').style.display = "none";
     nluTool.style.boxShadow = "unset"
-    nluTool.style.fontSize = "1em";
-    nluTool.style.transform = "scale(1)";
+    nluTool.style.transform = "scale(0.5)";
     nluTool.style.opacity = "0.5";
     document.getElementById('ipt').style.display = "none";
     iptTool.style.boxShadow = "unset"
-    iptTool.style.fontSize = "1em";
-    iptTool.style.transform = "scale(1)";
+    iptTool.style.transform = "scale(0.5)";
     iptTool.style.opacity = "0.5";
 }
 
 function showIPT(){
+    showTool();
     var tool = document.getElementById('ipt');
-    tool.style.display = "block";
+    // tool.style.display = "block";
     this.style.boxShadow = "4px 4px 25px #000"
-    this.style.transform = "scale(1.2)";
+    this.style.transform = "scale(0.6)";
     this.style.opacity = "1";
     document.getElementById('nlu').style.display = "none";
+    document.getElementById('detailnlu').style.display = "none";
     nluTool.style.boxShadow = "unset"
-    nluTool.style.fontSize = "1em";
-    nluTool.style.transform = "scale(1)";
+    nluTool.style.transform = "scale(0.5)";
     nluTool.style.opacity = "0.5";
     document.getElementById('utility').style.display = "none";
     utilityTool.style.boxShadow = "unset"
-    utilityTool.style.fontSize = "1em";
-    utilityTool.style.transform = "scale(1)";
+    utilityTool.style.transform = "scale(0.5)";
     utilityTool.style.opacity = "0.5";
 }
 
@@ -154,44 +168,48 @@ function showBottomSide(){
 
 // ---------- Animation js code for contact coming out from pic
 
-document.querySelector("#vj").addEventListener('click', showButtons);
-document.querySelector("#sandy").addEventListener('click', showButtons);
-document.querySelector("#prat").addEventListener('click', showButtons);
-document.querySelector("#sagar").addEventListener('click', showButtons);
-
-document.querySelector("#vj").addEventListener('blur', hideButtons);
-document.querySelector("#sandy").addEventListener('blur', hideButtons);
-document.querySelector("#prat").addEventListener('blur', hideButtons);
-document.querySelector("#sagar").addEventListener('blur', hideButtons);
+// document.querySelector("#vj").addEventListener('click', showButtons);
+// document.querySelector("#sandy").addEventListener('click', showButtons);
+// document.querySelector("#prat").addEventListener('click', showButtons);
+// document.querySelector("#sagar").addEventListener('click', showButtons);
+// document.querySelector("#colin").addEventListener('click', showButtons);
+// document.querySelector("#iain").addEventListener('click', showButtons);
 
 
-function showButtons(){
-    var btnWrapper = this.parentElement.querySelectorAll('.button-inside');
-    // console.log(this);
+// document.querySelector("#vj").addEventListener('blur', hideButtons);
+// document.querySelector("#sandy").addEventListener('blur', hideButtons);
+// document.querySelector("#prat").addEventListener('blur', hideButtons);
+// document.querySelector("#sagar").addEventListener('blur', hideButtons);
+// document.querySelector("#colin").addEventListener('blur', showButtons);
+// document.querySelector("#iain").addEventListener('blur', showButtons);
+
+// function showButtons(){
+//     var btnWrapper = this.parentElement.querySelectorAll('.button-inside');
+//     // console.log(this);
     
-    if(this.classList.contains('animation')) {
-        this.classList.remove('animation');
-    } else {
-        this.classList.add('animation');
-    }
+//     if(this.classList.contains('animation')) {
+//         this.classList.remove('animation');
+//     } else {
+//         this.classList.add('animation');
+//     }
 
-    for (i = 0; i < btnWrapper.length; i++ ) {
-        if(btnWrapper[i].classList.contains('animation')){
-            btnWrapper[i].classList.remove('animation');   
-        } else {
-            btnWrapper[i].classList.add('animation');
-        } 
-    }
-}
+//     for (i = 0; i < btnWrapper.length; i++ ) {
+//         if(btnWrapper[i].classList.contains('animation')){
+//             btnWrapper[i].classList.remove('animation');   
+//         } else {
+//             btnWrapper[i].classList.add('animation');
+//         } 
+//     }
+// }
 
-function hideButtons(){
-    var btnWrapper = this.parentElement.querySelectorAll('.button-inside');
-    this.classList.remove('animation');
+// function hideButtons(){
+//     var btnWrapper = this.parentElement.querySelectorAll('.button-inside');
+//     this.classList.remove('animation');
 
-    for (i = 0; i < btnWrapper.length; i++ ) {
-        btnWrapper[i].classList.remove('animation'); 
-    }
-}
+//     for (i = 0; i < btnWrapper.length; i++ ) {
+//         btnWrapper[i].classList.remove('animation'); 
+//     }
+// }
 
 // (function(){
 //     'use strict';
