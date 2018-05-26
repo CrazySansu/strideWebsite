@@ -42,11 +42,11 @@ function showTool(){
     nluTool.style.transform = "scale(0.5)";
     utilityTool.style.transform = "scale(0.5)";
 
-    iptTool.style.left = "0";
-    nluTool.style.left = "0";
-    utilityTool.style.left = "0";
+    iptTool.style.left = "-20px";
+    nluTool.style.left = "-20px";
+    utilityTool.style.left = "-20px";
 
-    iptTool.style.top = "30px";
+    iptTool.style.top = "20px";
     nluTool.style.top = "200px";
     utilityTool.style.top = "380px";
 }
