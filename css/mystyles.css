@@ -367,7 +367,7 @@ body{
     width: 40%;
     display: inline-block;
     margin: 15px;
-    float: right;
+    float: left;
     perspective: 600px;
 }
 
@@ -687,10 +687,68 @@ body{
 
 @media(min-width: 992px) and (max-width: 1199px){
     /*medium devices*/
-}
+    
+    #platformTools button{
+        height: 250px;
+        width: 250px;
+    }
+
+    #iptTool{
+        background-color: #E94C3C;
+        left: 40px;
+    }
+
+    #nluTool{
+        background-color: #3CA9E9;
+        left: 350px;
+    }
+
+    #utilityTool{
+        background-color: #52BE80;
+        left: 650px;
+    }
+    #nlu, #utility, #ipt{
+        left: 250px;
+        /*position: relative;*/
+    }
+    #nluList button{
+        display: inline-block;
+        position: relative;
+        margin: 0 auto;
+        width: 150px;
+        height: 50px;
+        top: 0;
+    }
+    #nluList{
+        width: 280px;
+    }
+
+    #nluPrism{
+        width: 30%;
+    }
+
+    .main-wrapper{
+        width: 20%;
+    }
+    .triggerContact{
+        right: 10px;
+    }
+    /*:root{
+        --prismHeight: 400px;
+        --prismWidth: 280px;
+    }*/
 
 @media(min-width: 768px) and (max-width: 991px){
     /*Small devices*/
+    #nlu{
+        position: relative;
+        display: block;
+    }
+
+    #nluPrism{
+        position: relative;
+        display: block;
+    }
     #logo-white{
         width: 150px;
         height: 50px;
