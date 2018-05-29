@@ -1,8 +1,6 @@
 /*
-    :root does not work in IE8
     border-radius is not supported by IE8
     box-shadow not supported in IE8 and Safari 5.0
-    
 */
 
 :root{
@@ -29,9 +27,8 @@ body{
     margin: 5px 10px;
     padding: 10px 10px;
     font-size: 1.25em;
-    background-color: #00C84F;
+    background-color: #00B84F;
     color: #fff;
-    box-shadow: 0 2px 25px #fff;
 }
 
 .demoButton:hover{
@@ -39,12 +36,12 @@ body{
 }
 
 
-
 /*---------- Header bar styling ----------*/
+
 
 #headingTag{
     border: 0;
-    background: linear-gradient(to right, #2570ff 0%,  #BA25FF 90%);
+    background: linear-gradient(to right, #2570ff -10%,  #BA25FF 30%);
     box-shadow: 0 2px 25px #FFF;
 }
 
@@ -75,12 +72,20 @@ body{
 }
 
 #navList li{
-    transition: transform border-bottom .3s;
+    transition: border-bottom .3s;
+}
+
+#navList li:hover{
+    border-bottom: 2px solid white;
 }
 
 #navList li a{
     color: #fff;
     font-size: 1.5em;
+}
+
+#navList ul li{
+    font-size: 12px;
 }
 
 .navbar-header button.navbar-toggle{
@@ -90,88 +95,83 @@ body{
     right: 10px;
 }
 
-.navbar-header button.navbar-toggle:hover, .navbar-header button.navbar-toggle:focus{
-    /*background-color: #2570FF;*/
-    /*background-color: #2570FF;*/
-}
-
 .navbar-header .icon-bar{
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     width: 50px;
     margin: 10px 0;
 }
 
-#navList li:hover{
-    /*transform: scale(1.1);*/
-    border-bottom: 2px solid white;
-}
-
-#navList ul li{
-    font-size: 12px;
-}
-
 .navbar-default .navbar-nav .open a:hover, .navbar-default .navbar-nav .open a:focus{
-    background-color: #aa25ff;
-}
-
-.navbar-default .navbar-nav .open a{
-    background-color: #BA25FF;
-    background-color: #BA25FF;
+    background-color: #BA25ff;
 }
 
 .dropdown-menu{
     background-color: #BA25FF;
-    background-color: #BA25FF;
-    /*width: 200px;*/
-    /*padding: 0;*/
 }
 
 .navbar-default .navbar-nav .open a{
-    background-color: #BA25FF;
     background-color: #BA25FF;
 }
 
 .dropdown-menu li{
     width: 100%;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
-
-.dropdown-menu li a: hover{
-    /*padding: 5px 0;*/
-    background-color: black !important;
-}
-
 
 
 /*---------- Main Content Styling ----------*/
+
+
 .content{
-    margin-top: 90px;
-    /*height: 500px;*/
+    margin-top: 70px;
 }
 
 #aboutus, #platform, #solution, #team{
-    margin-top: 5%;
+    margin-top: 50px;
 }
 
 .title{
     /*width: 120px;*/
     color: #000;
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 3em;
     margin-bottom: 0;
     text-align: left;
     clear: both;
-    /*margin: 15px*/
 }
 
 .titleLine{
     border-bottom: 5px solid #2570ff;
     width: 120px;
     margin: 0;
-    /*text-align: left;*/
+    text-align: left;
 }
 
+
+/*---------- About Us styling ----------*/
+
+
+#aboutus{
+    line-height: 2;
+}
+
+#aboutus h3{
+    color: #2570FF;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+#aboutus p{
+    width: 90%;
+    margin: 30px auto;
+    /*font-size: 12pt;*/
+    text-align: justify;
+}
+
+
 /*---------- Platform Styling ----------*/
+
 
 #platform{
     position: relative;
@@ -179,35 +179,34 @@ body{
 }
 
 #platformTools{
-    border-radius: 30px;
+    border-radius: 50px;
     border: 3px solid #c0c0c0;
     box-shadow: 5px 5px 15px #c0c0c0;
-    display: inline-block;
     width: 100%;
     min-height: 570px;
     margin: 15px auto;
-    /*padding: 5px;*/
     display: flex;
     align-items: center;
     justify-content: center;
-    /*transition: all .5s ease-in;*/
 }
 
-#platformTools button{
-    border: 0;
-    cursor: pointer;
-    width: 300px;
-    height: 300px;
-    border-radius: 30px;
-    /*opacity: 0.9;*/
-    margin: 10px;
-    top: 200px;
-    /*text-align: center;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    transition: all .3s ease-in;
+#iptTool, #nluTool, #utilityTool{
     position: absolute;
-    /*justify-content: center;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 25%;
+    height: 45%;
+    border-radius: 20%;
+    top: 35%;
+    margin-top: -2%;
+    transition: all .3s ease-in;
+}
+
+#iptTool:hover, #nluTool:hover, #utilityTool:hover{
+    top: 33%;
+    box-shadow: 0 5px 20px;
 }
 
 #platformTools a{
@@ -220,46 +219,41 @@ body{
 
 #iptTool{
     background-color: #E94C3C;
-    left: 40px;
+    left: 6%;
 }
 
 #nluTool{
     background-color: #3CA9E9;
-    left: 400px;
+    left: 37%;
 }
 
 #utilityTool{
     background-color: #52BE80;
-    left: 750px;
+    left: 68%;
 }
 
 #nlu, #utility, #ipt{
     width: 70%;
     position: absolute;
-    left: 300px;
-    top: 150px;
+    left: 25%;
     margin: 0px auto;
     padding-bottom: 15px;
     display: none;
-    /*transform: scale(0);*/
     animation: showElement 0.5s ease-out;
 }
 
 #detailnlu{
-    width: 80%;
+    width: 70%;
     text-align: justify;
-    padding: 0 20px;
-    margin-top: 550px;
+    padding: 0px 0 20px 0;
+    margin-top: 45%;
+    margin-left: 20%;
     display: none;
 }
 
 @keyframes showElement {
     from{transform: scale(0.5);}
     to{transform: scale(1);}
-}
-
-#ipt{
-
 }
 
 #iptDisplay{
@@ -271,8 +265,8 @@ body{
 
 .iptComponent{
     position: absolute;
-    width: 190px;
-    height: 190px;
+    width: 55%;
+    height: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,12 +303,11 @@ body{
     bottom: 0;
     right: 0;
 }
+
 #nluList{
     background-color: #BA25FF;
     width: 350px;
-    /*display: inline-block;*/
     margin: 15px;
-    /*text-align: center;*/
     height: 450px;
     padding-top: 30px;
     float: left;
@@ -324,12 +317,15 @@ body{
     font-size: 1em;
 }
 
+#nlu{
+    top: 13%;
+}
+
 #nlu p{
     font-size: 10pt;
     text-align: justify;
     padding: 0 15px;
     color: #fff;
-    /*margin: 30px auto;*/
 }
 
 #nluList .nav1{
@@ -345,7 +341,6 @@ body{
     padding: 10px;
     margin: 10px auto;
     border-radius: 20px;
-    /*box-shadow: 0 2px 25px #fff;*/
     transition: all .3s;
 }
 
@@ -376,7 +371,7 @@ body{
     height: 420px;
     position: relative;
     margin: 15px auto;
-    transform: translateZ(-150px);
+    transform: translateZ(-160px);
     transform-style: preserve-3d;
     transition: transform .5s ease-in;
 }
@@ -390,7 +385,6 @@ body{
     border: 3px solid #2570FF ;
     border-radius: 3px;
     text-align: justify;
-    /*color: #666;*/
 }
 
 .face h4{
@@ -400,7 +394,6 @@ body{
 }
 
 .face small{
-    /*padding: 5px;*/
     font-size: 0.8em;
 }
 
@@ -426,15 +419,15 @@ body{
     transform: rotateY(270deg) translateZ(160px); 
 }
 
-.face-bottom{ 
+/*.face-bottom{ 
     height: 320px;
     transform: rotateX(-90deg) translateZ(260px);
 }
-
+*/
 #utility{
     width: 60%;
-    top: 250px;
-    /*margin: 0 auto;*/
+    top: 35%;
+    left: 30%;
 }
 
 #utility p{
@@ -453,24 +446,7 @@ body{
     padding: 0 15px; 
 }
 
-/*---------- About Us styling ----------*/
-#aboutus{
-    line-height: 2;
-}
 
-#aboutus h3{
-    color: #2570FF;
-    text-align: center;
-    font-weight: bold;
-    margin: 30px 0;
-}
-
-#aboutus p{
-    width: 90%;
-    margin: 30px auto;
-    /*font-size: 12pt;*/
-    text-align: justify;
-}
 
 /*---------- Solution Styling ----------*/
 #solution{
@@ -489,22 +465,31 @@ body{
 }
 
 .pager li a{
-    background-color: #2570FF;
-    color: #fff;
-}
-
-.pager li a:focus, .pager li a:hover{
     background-color: #fff;
     color: #2570FF;
 }
 
+.pager li a:focus, .pager li a:hover{
+    background-color: #2570FF;
+    color: #fff;
+}
+
 /*---------- Team Styling ----------*/
 
+#carousel-team{
+    margin-top: 30px;
+}
 
+#team1, #team2, #team3{
+    min-height: 250px;
+}
+
+.carousel-control{
+    width: 5%;
+}
 .team{
     text-align: center;
     padding: 20px 0;
-    /*margin: 25px 0;*/
 }
 
 .main-wrapper{
@@ -520,36 +505,32 @@ body{
 
 .main-wrapper img{
     border-radius: 50%;
-    box-shadow: 0px 4px 8px #2570FF;
-    transition: all .3s;
+    box-shadow: 2px 5px 10px #2570FF;
+    transition: all .3s ease-in;
 }
 
 .main-wrapper img:hover{
     transform: scale(1.2);
 }
 
-.main-wrapper button{
+.triggerContact{
     background-color: #2570FF;
     position: absolute;
-    border: 0;
     border-radius: 50%;
     cursor: pointer;
-    will-change: transform;
-    transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1);
-    transform-origin: center center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /*will-change: transform;*/
+    /*transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1);*/
+    /*transform-origin: center center;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
     font-size: 1.2em;
-}
-
-.triggerContact{
     width: 45px;
     height: 45px;
     bottom: 0;
     right: 0;
-    padding: 0;
-    box-shadow: -1px 2px 12px rgba(0, 0, 0, 0.4);
+    /*padding: 0;*/
+    /*box-shadow: -1px 2px 12px #fff;*/
 }
 
 .triggerContact a{
@@ -571,38 +552,17 @@ body{
 }
 
 
-/*---------- Contact Us Styling ----------*/
-
-
 /*---------- Footer bar Styling ----------*/
 
 
 .panel-footer{
-    margin-top: 30px;
-    padding-top: 35px;
-    padding-bottom: 30px;
-    border-top: 0;
-    background: linear-gradient(to right, #2570ff 0%,  #BA25FF 90%);
+    margin-top: 20px;
+    /*padding-top: 35px;*/
+    padding-bottom: 20px;
+    /*border-top: 0;*/
+    background: linear-gradient(to right, #2570ff -10%,  #BA25FF 50%);
     color: #fff;
 }
-
-.panelfooter div.row{
-    margin-bottom: 35px;
-}
-
-#menubar{
-    line-height: 2;
-    text-align: center;
-}
-
-#menubar li{
-    /*display: inline-block;*/
-    list-style-type: none;
-    font-size: 1em;
-    cursor: pointer;
-    padding: 5px;
-}
-
 
 .detail{
     display: flex;
@@ -611,7 +571,6 @@ body{
 }
 
 #address span, #contactus span{
-    /*color: #2570FF;*/
     font-size: 3em;
     padding: 10px;
 }
@@ -662,7 +621,6 @@ body{
     line-height: 2;
     display: none;
     animation: showElement 0.5s ease-out;
-    /*width: auto;*/
 }
 
 #hiring{
@@ -685,70 +643,86 @@ body{
 
 /*---------- Changes for Mobile devices ----------*/
 
-@media(min-width: 992px) and (max-width: 1199px){
+@media(min-width: 769px) and (max-width: 1024px){
     /*medium devices*/
     
-    #platformTools button{
-        height: 250px;
-        width: 250px;
-    }
-
-    #iptTool{
-        background-color: #E94C3C;
-        left: 40px;
-    }
-
-    #nluTool{
-        background-color: #3CA9E9;
-        left: 350px;
-    }
-
-    #utilityTool{
-        background-color: #52BE80;
-        left: 650px;
-    }
-    #nlu, #utility, #ipt{
-        left: 250px;
-        /*position: relative;*/
-    }
-    #nluList button{
-        display: inline-block;
-        position: relative;
-        margin: 0 auto;
-        width: 150px;
-        height: 50px;
-        top: 0;
-    }
-    #nluList{
-        width: 280px;
-    }
-
-    #nluPrism{
-        width: 30%;
-    }
 
     .main-wrapper{
         width: 20%;
     }
+
     .triggerContact{
         right: 10px;
     }
-    /*:root{
-        420px: 400px;
-        320px: 280px;
-    }*/
-
-@media(min-width: 768px) and (max-width: 991px){
-    /*Small devices*/
-    #nlu{
-        position: relative;
-        display: block;
+    
+    #nluList{
+        width: 300px;
+        height: 400px;
     }
 
     #nluPrism{
-        position: relative;
-        display: block;
+        height: 380px;
+        width: 40%;
+        margin: 15px;
     }
+
+    .recPrism{
+        width: 300px;
+        height: 380px;
+        transform: translateZ(-150px);
+    }
+
+    .face{
+        width: 300px;
+        height: 380px;
+    }
+
+    .face h4{
+        font-size: 1.2em;
+    }
+
+    .face small{
+        font-size: 0.7em;
+    }
+
+    .face-front{
+        transform: rotate(0deg) translateZ(150px);
+    }
+
+    /*.face-top{ 
+        height: 320px;
+        transform: rotateX(90deg) translateZ(150px); 
+    }*/
+
+    .face-back{ 
+        transform: rotateY(180deg) translateZ(150px); 
+    }
+
+    .face-right{ 
+        transform: rotateY(90deg) translateZ(150px); 
+    }
+
+    .face-left{ 
+        transform: rotateY(270deg) translateZ(150px); 
+    }
+
+    /*.face-bottom{ 
+        height: 320px;
+        transform: rotateX(-90deg) translateZ(230px);
+    }
+    */
+    #detailnlu{
+        margin-top: 50%;
+    }
+}
+
+@media(min-width: 426px) and (max-width: 768px){
+    /*Small devices*/
+    
+    .demoButton{
+        font-size: 0.8em;
+    }
+
     #logo-white{
         width: 150px;
         height: 50px;
@@ -760,59 +734,139 @@ body{
         height: 50px;
         margin-top: 15px;
     }
+
+    #platformTools{
+        min-height: 350px;
+    }
+
+    #platformTools a{
+        font-size: 1.5em;
+    }
+
+  #ipt{
+        top: 20%;
+        left: 40%;
+    }
+
+    #utility{
+        top: 25%;
+        left: 25%;
+        width: 70%;
+        font-size: 1em;
+        /*left: 40%;*/
+    }
+
+    #iptTool{
+        /*top: 50px;*/
+    }
+
+    #ipt{
+        width: 300px;
+        height: 300px;
+    } 
+
+    #iptDisplay{
+        width: 200px;
+        height: 200px;
+    }
+
+    .iptComponent{
+        font-size: 0.8em;
+    }
+
+    #nluList{
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        top: 380px;
+        left: -150px;
+
+    }
+
+    #nluPrism{
+        height: 380px;
+        width: 300px;
+        margin: 15px;
+        position: absolute;
+        top: 380px;
+        left: 190px;
+    }
+
+    .recPrism{
+        width: 300px;
+        height: 380px;
+        transform: translateZ(-150px);
+    }
+
+    .face{
+        width: 300px;
+        height: 380px;
+    }
+
+    .face h4{
+        font-size: 1.2em;
+    }
+
+    .face small{
+        font-size: 0.7em;
+    }
+
+    .face-front{
+        transform: rotate(0deg) translateZ(150px);
+    }
+
+    /*.face-top{ 
+        height: 320px;
+        transform: rotateX(90deg) translateZ(150px); 
+    }*/
+
+    .face-back{ 
+        transform: rotateY(180deg) translateZ(150px); 
+    }
+
+    .face-right{ 
+        transform: rotateY(90deg) translateZ(150px); 
+    }
+
+    .face-left{ 
+        transform: rotateY(270deg) translateZ(150px); 
+    }
+
+    /*.face-bottom{ 
+        height: 320px;
+        transform: rotateX(-90deg) translateZ(230px);
+    }
+    */
+    #detailnlu{
+        margin-top: 5%;
+        margin-left: 15%;
+        font-size: 1em;
+    }
+
+    #solution{
+        margin-top: 450px;
+    }
+
+    #team1, #team2, #team3{
+        min-height: 480px;
+    }
 }
 
-@media(max-width: 767px){
+@media(max-width: 425px){
     /*Extra small devices*/
-    #navList li:hover{
-        transform: scale(1);
-        border-bottom: 2px solid white;
-    }
-    .content{
-        height: inherit;
-    }
-    #navList li a{
-        color: #fff;
-        /*font-size: 18px;*/
-    }
+
     #logo-white{
         width: 150px;
         height: 50px;
         margin: 15px 15px;
     }
+
     #logo-color{
         width: 150px;
         height: 50px;
         margin: 15px 15px;
     }
-    #platformTools{
-        display: block;
-        padding: 0 10px;
-    }
-    #platformTools button{
-        position: relative;
-        margin: 20px 0;
-    }
-    #iptTool, #nluTool, #utilityTool{
-        left: 0;
-    }
-    #nluPrism{
-        /*margin: 0;*/
-        /*position: relative;*/
-        display: none;
-    }
-    #nlu ,#ipt, #utility{
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-    }
-    #nluList{
-        margin: 15px;
-        padding: 0;
-        /*width: 300px;*/
-        height: 400px;
-        position: relative;
-    }
+
     #aboutus p{
         width: 100%;
     }

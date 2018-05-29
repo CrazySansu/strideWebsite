@@ -6,17 +6,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Stride | Text Analytics</title>
+	<title>Stride AI</title>
 	<link rel="shortcut icon" href="img/stride-badge.png">
 	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="description" content="Stride.ai helps business extract themes to supplement their terms of interest using tools like Texie to learn from data and translate text to insight.">
-	 -->
+	<!-- <meta name="description" content="Stride.ai helps business extract themes to supplement their terms of interest using tools like Texie to learn from data and translate text to insight.">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Sanskar Baid">
 
-	<!-- <script src="js/angular.min.js"></script> -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -44,19 +42,6 @@
 	    		<div class="collapse navbar-collapse" id="collapsable-nav">
 	      			<ul class="nav navbar-nav navbar-right" id="navList">
 	        			<li><a href="#platform">Platform</a></li>
-	        			<!-- <li><a href="#technology">Technology</a></li> -->
-	        			<!-- <li class="dropdown">
-          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Solution
-          						<span class="caret"></span>
-          					</a>
-          					<ul class="dropdown-menu">
-            					<li><a href="#collMgmt">Collateral Management</a></li>
-            					<li><a href="#kyc">KYC</a></li>
-	        					<li><a href="#npmCont">NPM Contract Summarization</a></li>
-            					<li><a href="#profitLoss">Profit-Loss Statement Processing</a></li>
-            					<li><a href="#fundsAuto">Funds Onboarding Automation</a></li>
-          					</ul>
-        				</li> -->
         				<li><a href="#solution">Solutions</a></li>
 	        			<li class="dropdown">
           					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Company
@@ -92,15 +77,15 @@
 				<h2 class="title">PLATFORM</h2>
 				<hr class="titleLine">
 				<div id="platformTools">
-					<button id="iptTool">
+					<div id="iptTool">
 						<a>Information Processing Tool</a>
-					</button>
-					<button id="nluTool">
+					</div>
+					<div id="nluTool">
 						<a>NLU Tools</a>
-					</button>
-					<button id="utilityTool">
+					</div>
+					<div id="utilityTool">
 						<a>Utility Tool</a>
-					</button>
+					</div>
 
 					<div id="ipt">
 						The four core components which power our Information Processing Tools are:
@@ -352,64 +337,165 @@
 			<div id="team" class="team">
 				<h2 class="title">OUR TEAM</h2>
 				<hr class="titleLine">
-				<div class="main-wrapper ">
-			 		<div class="teamPic"> 
-			 			<img alt="Vijay, CEO" src="img/vijay.jpg">
-			 			<span class="teamName">Vijay Nadadur<br>CEO, Co-Founder</span>
-			 		</div>
-			 		<button class="triggerContact" id="vj">
-			 			<a href="https://www.linkedin.com/in/vijaykant-nadadur-2769b2b" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 		</button>
-				</div>
-
-				<div class="main-wrapper ">
-			 		<div class="teamPic"> 
-			 			<img alt="Sendhil, COO" src="img/sendhil.jpg">
-			 			<span class="teamName">Sendhil Kumar<br>COO, Co-Founder</span>
-			 		</div>
-			 		<button class="triggerContact" id="sandy">
-			 			<a href="https://www.linkedin.com/in/senthil-kumar-a101009" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 		</button>
-				</div>
 				
-				<div class="main-wrapper">
-			 		<div class="teamPic"> 
-			 			<img alt="Pratheek, CTO" src="img/pratheek.jpg">
-			 			<span class="teamName">Pratheek M S<br>CTO</span>
-			 		</div>
-			 		<button class="triggerContact" id="prat">
-			 			<a href="https://in.linkedin.com/in/pratheekms" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 		</button>
-				</div>
+				<div id="carousel-team" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+				  	<ol class="carousel-indicators">
+				    	<li data-target="#carousel-team" data-slide-to="0" class="active"></li>
+				    	<li data-target="#carousel-team" data-slide-to="1"></li>
+				    	<li data-target="#carousel-team" data-slide-to="2"></li>
+				  	</ol>
 
-				<div class="main-wrapper " >
-			 		<div class="teamPic"> 
-			 			<img alt="Sagar,MTS" src="img/sagar.jpg">
-			 			<span class="teamName">Sagar Rao<br>Member Technical Staff</span>
-			 		</div>
-			 		<button class="triggerContact" id="sagar">
-			 			<a href="https://in.linkedin.com/in/sagar-rao-b6b26669" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 		</button>
-				</div>
+				  	<!-- Wrapper for slides -->
+				  	<div class="carousel-inner" role="listbox">
+				    	<div id="team1" class="item active">
+				    		<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Vijay, CEO" src="img/vijay.jpg">
+						 			<span class="teamName">Vijay Nadadur<br>CEO, Co-Founder</span>
+						 		</div>
+						 		<div class="triggerContact" id="vj">
+						 			<a href="https://www.linkedin.com/in/vijaykant-nadadur-2769b2b" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
 
-				<div class="main-wrapper ">
-			 		<div class="teamPic"> 
-			 			<img alt="Colin" src="img/Colin.jpg">
-			 			<span class="teamName">Colin Wallace</span>
-			 		</div>
-			 		<button class="triggerContact" id="colin">
-			 			<a href="https://www.linkedin.com/in/colin-wallace-6a24115" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 		</button>
-				</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Sendhil, COO" src="img/sendhil.jpg">
+						 			<span class="teamName">Sendhil Kumar<br>COO, Co-Founder</span>
+						 		</div>
+						 		<div class="triggerContact" id="sandy">
+						 			<a href="https://www.linkedin.com/in/senthil-kumar-a101009" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							
+							<div class="main-wrapper">
+						 		<div class="teamPic"> 
+						 			<img alt="Pratheek, CTO" src="img/pratheek.jpg">
+						 			<span class="teamName">Pratheek M S<br>CTO</span>
+						 		</div>
+						 		<div class="triggerContact" id="prat">
+						 			<a href="https://in.linkedin.com/in/pratheekms" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
 
-				<div class="main-wrapper ">
-			 		<div class="teamPic"> 
-			 			<img alt="Iain" src="img/Iain.jpg">
-			 			<span class="teamName">Iain Wallace</span>
-			 		</div>
-			 		<button class="triggerContact" id="iain">
-			 			<a href="https://www.linkedin.com/in/iain-wallace-8068441/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-			 		</button>
+							<div class="main-wrapper " >
+						 		<div class="teamPic"> 
+						 			<img alt="Sagar,MTS" src="img/sagar.jpg">
+						 			<span class="teamName">Sagar Rao<br>Member Technical Staff</span>
+						 		</div>
+						 		<div class="triggerContact" id="sagar">
+						 			<a href="https://in.linkedin.com/in/sagar-rao-b6b26669" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Colin" src="img/Colin.jpg">
+						 			<span class="teamName">Colin Wallace</span>
+						 		</div>
+						 		<div class="triggerContact" id="colin">
+						 			<a href="https://www.linkedin.com/in/colin-wallace-6a24115" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Iain" src="img/Iain.jpg">
+						 			<span class="teamName">Iain Wallace</span>
+						 		</div>
+						 		<div class="triggerContact" id="iain">
+						 			<a href="https://www.linkedin.com/in/iain-wallace-8068441/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+				    	</div>
+				    	<div id="team2" class="item">
+				    		<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="vishnu" src="img/vishnu.jpg">
+						 			<span class="teamName">Vishnu Y S<br>Senior Software Engineer</span>
+						 		</div>
+						 		<div class="triggerContact" id="vishnu">
+						 			<a href="https://www.linkedin.com/in/vishnuys/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Prem" src="img/prem.jpeg">
+						 			<span class="teamName">Prem Sompura<br>Devops Engineer</span>
+						 		</div>
+						 		<div class="triggerContact" id="prem">
+						 			<a href="https://www.linkedin.com/in/premsompura/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Ajay" src="img/ajay.jpg">
+						 			<span class="teamName">Ajay Srinivasan<br>Member Technical Staff</span>
+						 		</div>
+						 		<div class="triggerContact" id="ajay">
+						 			<a href="https://www.linkedin.com/in/ajaysrinivasan28/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Nihal" src="img/nihal.jpg">
+						 			<span class="teamName">Nihal Nayak<br>NLP Engineer</span>
+						 		</div>
+						 		<div class="triggerContact" id="nihal">
+						 			<a href="https://www.linkedin.com/in/nihal-v-nayak-659ba780/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+				    	</div>
+				    	<div id="team3" class="item">
+				    		<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="jeevith" src="img/jeevith.jpg">
+						 			<span class="teamName">Jeevith Bopaiah<br>Member Technical Staff</span>
+						 		</div>
+						 		<div class="triggerContact" id="jeevith">
+						 			<a href="https://in.linkedin.com/in/jeevith-bopaiah-385a0981" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Sahith" src="img/sahith.jpg">
+						 			<span class="teamName">Sahith Koganti<br>NLP Engineer</span>
+						 		</div>
+						 		<div class="triggerContact" id="sahith">
+						 			<a href="https://www.linkedin.com/in/sahit-koganti-ab281799/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Mayank" src="img/mayank.jpg">
+						 			<span class="teamName">Mayank Siddharth<br>NLP Engineer</span>
+						 		</div>
+						 		<div class="triggerContact" id="mayank">
+						 			<a href="https://www.linkedin.com/in/mayank-siddharth/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+							<div class="main-wrapper ">
+						 		<div class="teamPic"> 
+						 			<img alt="Gaurav" src="img/gaurav.jpg">
+						 			<span class="teamName">Gaurav Shegokar<br>NLP Engineer</span>
+						 		</div>
+						 		<div class="triggerContact" id="gaurav">
+						 			<a href="https://www.linkedin.com/in/gauravshegokar/" target="_blank"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+						 		</div>
+							</div>
+				    	</div>
+				    </div>
+
+				    <!-- Controls -->
+				  	<a class="left carousel-control" href="#carousel-team" role="button" data-slide="prev">
+				    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    	<span class="sr-only">Previous</span>
+				  	</a>
+				  	<a class="right carousel-control" href="#carousel-team" role="button" data-slide="next">
+				    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    	<span class="sr-only">Next</span>
+				  	</a>
+
 				</div>
 			</div>
 		</div>

@@ -12,16 +12,21 @@ $(function () {
     $("#navbarToggle").click(function (event){
         $('.content').css("margin-top",350);
     });
+
+    $('.carousel').carousel({
+        interval: false,
+        wrap: false
+    })
 });
 
 window.onscroll = function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("headingTag").style.background = "linear-gradient(to right, #ffffff -50%,  #BA25FF 50%)";
+        document.getElementById("headingTag").style.background = "linear-gradient(to right, #ffffff -10%,  #BA25FF 50%)";
         // document.getElementById("headingTag").style.background = "black";
         document.getElementById("logo-white").style.display = "none";
         document.getElementById("logo-color").style.display = "block";
     } else {
-        document.getElementById("headingTag").style.background = "linear-gradient(to right, #2570ff -50%,  #BA25FF 50%)";
+        document.getElementById("headingTag").style.background = "linear-gradient(to right, #2570ff -10%,  #BA25FF 50%)";
         document.getElementById("logo-white").style.display = "block";
         document.getElementById("logo-color").style.display = "none";
     }
@@ -42,13 +47,20 @@ function showTool(){
     nluTool.style.transform = "scale(0.5)";
     utilityTool.style.transform = "scale(0.5)";
 
-    iptTool.style.left = "-20px";
-    nluTool.style.left = "-20px";
-    utilityTool.style.left = "-20px";
+    iptTool.style.left = "-2%";
+    nluTool.style.left = "-2%";
+    utilityTool.style.left = "-2%";
 
-    iptTool.style.top = "20px";
-    nluTool.style.top = "200px";
-    utilityTool.style.top = "380px";
+    iptTool.style.top = "8%";
+    nluTool.style.top = "35%";
+    utilityTool.style.top = "62%";
+
+    var screenWidth = window.innerWidth;
+    if(screenWidth <769){
+        iptTool.style.top = "15%";
+        nluTool.style.top = "40%";
+        utilityTool.style.top = "65%";
+    }
 }
 
 function showNLU(){
@@ -105,25 +117,6 @@ function showIPT(){
     utilityTool.style.opacity = "0.5";
 }
 
-function hideTools(){
-    nluTool.style.boxShadow = "unset"
-    nluTool.style.fontSize = "1em";
-    nluTool.style.transform = "scale(1)";
-    nluTool.style.opacity = "1";
-    document.getElementById('nlu').style.display = "none";
-
-    document.getElementById('utility').style.display = "none";
-    utilityTool.style.boxShadow = "unset"
-    utilityTool.style.fontSize = "1em";
-    utilityTool.style.transform = "scale(1)";
-    utilityTool.style.opacity = "1";
-    
-    document.getElementById('ipt').style.display = "none";
-    iptTool.style.boxShadow = "unset"
-    iptTool.style.fontSize = "1em";
-    iptTool.style.transform = "scale(1)";
-    iptTool.style.opacity = "1";
-} 
 
 // ---------- Animation for the NLU Prism
 
