@@ -55,16 +55,20 @@ function showTool(){
     nluTool.style.top = "35%";
     utilityTool.style.top = "62%";
 
+    document.getElementById("solution").style.marginTop = "40px";
+
     var screenWidth = window.innerWidth;
     if(screenWidth <769){
         iptTool.style.top = "15%";
-        nluTool.style.top = "40%";
-        utilityTool.style.top = "65%";
+        nluTool.style.top = "41%";
+        utilityTool.style.top = "66%";
     }
 }
 
 function showNLU(){
-    showTool();
+    if(window.innerWidth > 625){
+        showTool();
+    }
     var tool = document.getElementById('nlu');
     tool.style.display = "block";
     document.getElementById('detailnlu').style.display = "block";
@@ -79,10 +83,21 @@ function showNLU(){
     iptTool.style.boxShadow = "unset"
     iptTool.style.transform = "scale(0.5)";
     iptTool.style.opacity = "0.5";
+    if(window.innerWidth < 769){
+        document.getElementById("solution").style.marginTop = "450px";
+    }
+    if(window.innerWidth < 626){
+        this.style.transform = "scale(1.1)";
+        utilityTool.style.transform = "scale(1)";
+        iptTool.style.transform = "scale(1)";
+        document.getElementById("solution").style.marginTop = "1040px";
+    }
 }
 
 function showUtility(){
-    showTool();
+    if(window.innerWidth > 625){
+        showTool();
+    }
     var tool = document.getElementById('utility');
     tool.style.display = "block";
     this.style.boxShadow = "4px 4px 25px #000"
@@ -97,10 +112,18 @@ function showUtility(){
     iptTool.style.boxShadow = "unset"
     iptTool.style.transform = "scale(0.5)";
     iptTool.style.opacity = "0.5";
+    if(window.innerWidth < 626){
+        this.style.transform = "scale(1.1)";
+        nluTool.style.transform = "scale(1)";
+        iptTool.style.transform = "scale(1)";
+        document.getElementById("solution").style.marginTop = "380px";
+    }
 }
 
 function showIPT(){
-    showTool();
+    if(window.innerWidth > 625){
+        showTool();
+    }
     var tool = document.getElementById('ipt');
     tool.style.display = "block";
     this.style.boxShadow = "4px 4px 25px #000"
@@ -115,6 +138,12 @@ function showIPT(){
     utilityTool.style.boxShadow = "unset"
     utilityTool.style.transform = "scale(0.5)";
     utilityTool.style.opacity = "0.5";
+    if(window.innerWidth < 626){
+        this.style.transform = "scale(1.1)";
+        utilityTool.style.transform = "scale(1)";
+        nluTool.style.transform = "scale(1)";
+        document.getElementById("solution").style.marginTop = "400px";
+    }
 }
 
 
@@ -124,13 +153,27 @@ let prism = document.querySelector(".recPrism");
 // console.log(prism);
 
 function showSubjectiveSA(){
-    prism.style.transform = "translateZ(-150px) rotateY( -90deg)";
+        prism.style.msTransform = "translateZ(-150px) rotateY( -90deg)";
+       prism.style.MozTransform = "translateZ(-150px) rotateY( -90deg)";
+    prism.style.webkitTransform = "translateZ(-150px) rotateY( -90deg)";
+         prism.style.OTransform = "translateZ(-150px) rotateY( -90deg)";
+          prism.style.transform = "translateZ(-150px) rotateY( -90deg)";
+    // prism.style.transform = "translateZ(-150px) rotateY( -90deg)";
 }
 function showSentimentAnalysis(){
-    prism.style.transform = "translateZ(-150px)";
+        prism.style.msTransform = "translateZ(-150px) ";
+       prism.style.MozTransform = "translateZ(-150px) ";
+    prism.style.webkitTransform = "translateZ(-150px) ";
+         prism.style.OTransform = "translateZ(-150px) ";
+          prism.style.transform = "translateZ(-150px) ";
 }
 function showTextSummarization(){
-    prism.style.transform = "translateZ(-150px) rotateY( -180deg)";
+        prism.style.msTransform = "translateZ(-150px) rotateY( -180deg)";
+       prism.style.MozTransform = "translateZ(-150px) rotateY( -180deg)";
+    prism.style.webkitTransform = "translateZ(-150px) rotateY( -180deg)";
+         prism.style.OTransform = "translateZ(-150px) rotateY( -180deg)";
+          prism.style.transform = "translateZ(-150px) rotateY( -180deg)";
+    // prism.style.transform = "translateZ(-150px) rotateY( -180deg)";
 }
 
 // function showKeywordExtraction(){
@@ -138,11 +181,21 @@ function showTextSummarization(){
 // }
 
 function showSemanticSimilarity(){
-    prism.style.transform = "translateZ(-150px) rotateY( -270deg)";
+        prism.style.msTransform = "translateZ(-150px) rotateY( -270deg)";
+       prism.style.MozTransform = "translateZ(-150px) rotateY( -270deg)";
+    prism.style.webkitTransform = "translateZ(-150px) rotateY( -270deg)";
+         prism.style.OTransform = "translateZ(-150px) rotateY( -270deg)";
+          prism.style.transform = "translateZ(-150px) rotateY( -270deg)";
+    // prism.style.transform = "translateZ(-150px) rotateY( -270deg)";
 }
 
 function showBottomSide(){
-    prism.style.transform = "translateZ(-150px) rotateX( 90deg)";
+        prism.style.msTransform = "translateZ(-150px) rotateY(90deg)";
+       prism.style.MozTransform = "translateZ(-150px) rotateY(90deg)";
+    prism.style.webkitTransform = "translateZ(-150px) rotateY(90deg)";
+         prism.style.OTransform = "translateZ(-150px) rotateY(90deg)";
+          prism.style.transform = "translateZ(-150px) rotateY(90deg)";
+    // prism.style.transform = "translateZ(-150px) rotateX( 90deg)";
 }
 
 // --------------- careers.html -----------------
